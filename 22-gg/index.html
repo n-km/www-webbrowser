@@ -3,7 +3,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="https://image.spreadshirtmedia.net/image-server/v1/products/T1459A839PA4459PT28D193179779W9853H10000/views/1,width=378,height=378,appearanceId=839,backgroundColor=F2F2F2/lupe-symbol-icon.jpg">
+    <title>Browser</title>
     <style>
         body {
             align-items: center;
@@ -11,7 +12,7 @@
             justify-content: center;
             font-family: arial;
             margin-top: 150px;
-            background-image: url("https://wallpaperaccess.com/full/2467562.jpg");
+            background-image: url("https://free4kwallpapers.com/uploads/originals/2019/08/04/stone-wallpaper.jpg");
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -31,7 +32,7 @@
         }
         input:focus {
             border-radius: 0px;
-            border-color: rgb(0, 0, 0);
+            border-color: rgb(201, 201, 201);
             transition: 0.1s;
             color: rgb(0, 0, 0);
             outline: none;
@@ -40,17 +41,8 @@
             padding: 20px 20px 20px 20px;
             font-size: 25px;
         }
-        button {
-            border-radius: 0px;
-            background-color: rgba(255, 0, 0, 0.61)192 ;
-            border-width: 1px;
-            margin-bottom: 150px;
-            margin-right: 250px;
-        }
-        button a {
-            text-decoration: none;
-            color: black;
-        }
+        
+        
         .searchinterface {
             background-color: rgba(255, 255, 255, 0);
             width: 800px;
@@ -66,11 +58,31 @@
             display: inline-block;
             padding: 8px 8px 8px 8px;
         }
-        .background {
-            display: flex;
+       
+        .grass {
+            float: left;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
         }
-        
-        
+        .mountain {
+            float: left;
+        }
+        .bg {
+            background-color: transparent;
+            display: table;
+        }
+        .bg button {
+            width: 120px;
+            height: 35px;
+            background-color: white;
+            border-width: 0px;
+        }
+        .bg button:hover {
+            background-color: rgb(185, 185, 185);
+            transition: 0.2s;
+            cursor: pointer;
+
+        }
     </style>
 
 <style>@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Light.otf") format("opentype");font-weight:300;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Regular.otf") format("opentype");font-weight:400;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Medium.otf") format("opentype");font-weight:500;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Bold.otf") format("opentype");font-weight:600;font-style:normal}</style><style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa">
@@ -108,10 +120,18 @@
   <br>
   <br>
   <p>Tippe "-help" für Hilfeleistung.</p>
-    <div class="background">
-        <button type="button" onclick="body.style.background = 'black' ">Dark-mode</button>
+<br><br>
+       <div class="bg">
+        <button class="grass" type="button" onclick="body.style.backgroundImage = 'url(https://img3.wallspic.com/attachments/originals/0/4/4/3/0/103440-grazing-vegetation-grassland-tree-wall-4096x2160.jpg)' ">Grass-mode</button>
+        <br>
+        <button class="mountain" type="button" onclick="body.style.backgroundImage = 'url(https://wallpaperaccess.com/full/38581.jpg)' ">Mountain-mode</button>
+        <br>
+        <button class="dark" type="button" onclick="body.style.backgroundImage = 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAACVBMVEUwMDAsLCwxMTGsbUDcAAABb0lEQVR4nO3QQQ0AIBDAMA7/orHAXoSkVbBszeKaWcHs1wUfMSswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzDr3gFT/QH17Foa0wAAAABJRU5ErkJggg==)' ">Dark-Mode</button>
+        <br>
+        <button type="button" onclick="body.style.backgroundImage = 'url(https://free4kwallpapers.com/uploads/originals/2019/08/04/stone-wallpaper.jpg)'">Normal</button>
         </div>
+       
   
 
-</label><script src="chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/inject.js"></script></body><div id="lumaly-shadowroot"></div>
+
 </html>
