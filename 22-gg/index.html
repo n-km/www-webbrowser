@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
             margin-top: 150px;
             background-image: url("https://wallpaperaccess.com/full/2467562.jpg");
             background-size: 100%;
-            
+            background-repeat: no-repeat;
         }
         input {
             border-radius: 0px;
@@ -51,7 +52,7 @@
             color: black;
         }
         .searchinterface {
-            background-color: rgba(255, 255, 255, 0)
+            background-color: rgba(255, 255, 255, 0);
             width: 800px;
             height: 400px;
             border-radius: 5px;
@@ -65,10 +66,16 @@
             display: inline-block;
             padding: 8px 8px 8px 8px;
         }
+        .background {
+            display: flex;
+        }
+        
         
     </style>
 
-<style>@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Light.otf") format("opentype");font-weight:300;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Regular.otf") format("opentype");font-weight:400;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Medium.otf") format("opentype");font-weight:500;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Bold.otf") format("opentype");font-weight:600;font-style:normal}</style><style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa"></head>
+<style>@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Light.otf") format("opentype");font-weight:300;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Regular.otf") format("opentype");font-weight:400;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Medium.otf") format("opentype");font-weight:500;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Bold.otf") format("opentype");font-weight:600;font-style:normal}</style><style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa">
+</head>
+
 <body>
 
 
@@ -91,7 +98,7 @@
          <script>
             document.getElementById('font-size').addEventListener('change',function(){
                 console.warn("Wait.for.accept:Code=", this.value);
-                alert(this.value)
+                
                 console.info("Accepted", this.value)
               close.alert=this.button;
               location.href=this.value;
@@ -101,7 +108,10 @@
   <br>
   <br>
   <p>Tippe "-help" für Hilfeleistung.</p>
-
+    <div class="background">
+        <button type="button" onclick="body.style.background = 'black' ">Dark-mode</button>
+        </div>
   
 
-</label><script src="chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/inject.js"></script></body><div id="lumaly-shadowroot"></div></html>
+</label><script src="chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/inject.js"></script></body><div id="lumaly-shadowroot"></div>
+</html>
