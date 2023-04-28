@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filemanager</title>
+    <style>
+        
+        body {
+            background-image: url("https://www.chromethemer.com/download/hd-wallpapers/dark-wood-3840x2160.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            font-family: arial;
+        }
+        .background {
+            background-color: rgba(255, 255, 255, 0.55);
+            border-radius: 5px;
+            width: 500px;
+            height: 500px;
+        }
+        .inhalt {
+        padding: 0px 0px 0px 0px;
+        }
+        .exit input[type="submit"]{
+            background-color: transparent;
+            color: rgb(56, 56, 56);
+            height: 20px;
+            width:30px;
+            float: right;
+            border-width: 0px;
+            border-top-right-radius: 5px;
+        }
+        .exit input[type="submit"]:hover{
+            background-color: red;
+            color: white;
+            height: 20px;
+            width:30px;
+            float: right;
+            border-width: 0px;
+            border-top-right-radius: 5px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .minimize input[type="submit"]{
+            background-color: transparent;
+            color: rgb(56, 56, 56);
+            height: 20px;
+            width:30px;
+            float: right;
+            border-width: 0px;
+        }
+        .minimize input[type="submit"]:hover{
+            background-color: rgba(0, 0, 0, 0.389);
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .file {
+            padding: 7px 7px 7px 7px;
+            border-radius: 3px;
+            width: 450px;
+        }
+        .file:hover {
+            background-color: rgba(0, 0, 0, 0.345);
+            cursor: pointer;
+            transition: 0.1s;
+        }
+        .file:active {
+            background-color: rgba(0, 0, 0, 0.249);
+        }
+        .file textarea {
+            height: 20px;
+            resize: none;
+        }
+        .fileinterface {
+            display: table;
+        }
+        .scrollbar {
+            width: 5px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: rgba(108, 108, 108, 0.556);
+            padding: 0px 0px 0px 0px;
+            float: right;
+            cursor: pointer;
+        }
+        .scrollbar:hover {
+            padding: 3px 3px 3px 3px;
+            width: 8px;
+            transition: 0.2s;
+            background-color: rgba(83, 83, 83, 0.556);
+        }
+    
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="inhalt">
+            <div class="exit">
+                <form action=/www-webbrowser/22-gg>
+                    <input type="submit" value="X">
+                </form>
+            </div>
+            <div class="minimize">
+                <form action="">
+                    <input type="submit" value="—">
+                </form>
+            </div>
+       <div class="fileinterface">
+        <div class="file">
+            <img height="30px" width="30px" src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png">
+            <textarea placeholder="C:250GB      " disabled="disabled"></textarea>
+        </div>
+        <div class="file">
+            <img height="30px" width="30px" src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png">
+            <textarea placeholder="D:500GB      " disabled="disabled"></textarea>
+        </div>
+       </div>
+        <div class="scrollbar">
+        </div>
+    </div>
+    </div>
+</body>
+</html>
