@@ -13,16 +13,25 @@
             background-repeat: no-repeat;
             font-family: arial;
         }
-        .background {
+        .background-filemanagement {
             background-color: rgba(255, 255, 255, 0.55);
             border-radius: 5px;
             width: 500px;
             height: 500px;
+            display: none;
+        }
+        .background-alert {
+            background-color: rgba(255, 255, 255, 0.55);
+            border-radius: 5px;
+            width: 500px;
+            height: 500px;
+            margin-left: 10px;
+            display: none;
         }
         .inhalt {
         padding: 0px 0px 0px 0px;
         }
-        .exit input[type="submit"]{
+        .exit input[type="button"]{
             background-color: transparent;
             color: rgb(56, 56, 56);
             height: 20px;
@@ -31,7 +40,7 @@
             border-width: 0px;
             border-top-right-radius: 5px;
         }
-        .exit input[type="submit"]:hover{
+        .exit input[type="button"]:hover{
             background-color: red;
             color: white;
             height: 20px;
@@ -42,7 +51,7 @@
             transition: 0.2s;
             cursor: pointer;
         }
-        .minimize input[type="submit"]{
+        .minimize input[type="button"]{
             background-color: transparent;
             color: rgb(56, 56, 56);
             height: 20px;
@@ -50,7 +59,7 @@
             float: right;
             border-width: 0px;
         }
-        .minimize input[type="submit"]:hover{
+        .minimize input[type="button"]:hover{
             background-color: rgba(0, 0, 0, 0.389);
             color: white;
             cursor: pointer;
@@ -91,36 +100,107 @@
             transition: 0.2s;
             background-color: rgba(83, 83, 83, 0.556);
         }
-    
-
+        .src {
+            display: flex;
+        }
+        .task-bar {
+            display: flex;
+            float: center;
+            position: fixed;
+        }
+        .task-bar-bg {
+            background-color: rgba(255, 255, 255, 0.448)55, 255, 255;
+            padding: 5px 5px 5px 5px;
+            display: flex
+        }
+        .open-filemanager {
+            background-color: rgba(199, 199, 199, 0.67);
+            padding: 5px 5px 5px 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 3px;
+        }
+        .open-alert {
+            background-color: rgba(199, 199, 199, 0.67);
+            padding: 5px 5px 5px 5px;
+            border-radius: 10px;
+            margin-left: 3px;
+            cursor: pointer;
+        }
+        .open-home {
+            background-color: rgba(199, 199, 199, 0.67);
+            padding: 5px 5px 5px 5px;
+            border-radius: 10px;
+            margin-left: 3px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <div class="background">
-        <div class="inhalt">
-            <div class="exit">
-                <form action=/www-webbrowser/22-gg>
-                    <input type="submit" value="X">
-                </form>
+    <div class="src">
+        <div id="FILE" class="background-filemanagement">
+            <div class="inhalt">
+                <div class="exit">
+                    <form>
+                        <input type="button" onclick="FILE.style.display = 'none'" value="X">
+                    </form>
+                </div>
+                <div class="minimize">
+                    <form action="">
+                        <input type="button" value="—">
+                    </form>
+                </div>
+           <div class="fileinterface">
+            <div class="file">
+                <img height="30px" width="30px" src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png">
+                <textarea placeholder="C:250GB      " disabled="disabled"></textarea>
             </div>
-            <div class="minimize">
-                <form action="">
-                    <input type="submit" value="—">
-                </form>
+            <div class="file">
+                <img height="30px" width="30px" src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png">
+                <textarea placeholder="D:500GB      " disabled="disabled"></textarea>
             </div>
-       <div class="fileinterface">
-        <div class="file">
-            <img height="30px" width="30px" src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png">
-            <textarea placeholder="C:250GB      " disabled="disabled"></textarea>
+           </div>
+            <div class="scrollbar">
+            </div>
         </div>
-        <div class="file">
-            <img height="30px" width="30px" src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png">
-            <textarea placeholder="D:500GB      " disabled="disabled"></textarea>
         </div>
-       </div>
-        <div class="scrollbar">
+        <div id="ALERT" class="background-alert">
+            <div class="inhalt">
+                <div class="exit">
+                    <form>
+                        <input type="button" onclick="ALERT.style.display = 'none'" value="X">
+                    </form>
+                </div>
+                <div class="minimize">
+                    <form action="">
+                        <input type="button" value="—">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="task-bar">
+            <div class="task-bar-bg">
+                <div class="open-home">
+                    <a href="/www-webbrowser/22-gg"><button  style="background-color: transparent; border-width: 0px; cursor: pointer;"><img height="50px" width="50px" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/34224/house-home-clipart-xl.png"></button></a>
+                    </div>
+                <div class="open-filemanager">
+                <button  style="background-color: transparent; border-width: 0px; cursor: pointer;" onclick="FILE.style.display = 'block'"><img height="50px" width="50px" src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png"></button>
+                </div>
+                <div class="open-alert">
+                <button  style="background-color: transparent; border-width: 0px; cursor: pointer;" onclick="ALERT.style.display = 'block'"><img height="50px" width="50px" src="https://cdn-icons-png.flaticon.com/512/9111/9111763.png"></button>
+                </div>
+            </div>
     </div>
 </body>
 </html>
