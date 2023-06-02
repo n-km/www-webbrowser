@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile</title>
+    <style>
+        #SETTING {
+            display: none;
+        }
+        body {
+            background-color: rgb(142, 142, 142);
+        }
+        .rahmen {
+            margin-top: 200px;
+            border-width: 2px;
+            border-color: black;
+            border-radius: 10px;
+            height: 500px;
+            width: 250px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .rahmen:hover {
+            box-shadow: 1px 1px 1px 1px;
+            transition: 0.2s;
+        }
+        .innenrahmen {
+            width: 245px;
+            height: 450px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-color: black;
+            border-width: 2px;
+            background-image: url("https://th.bing.com/th/id/R.68141cab5cb3a4b8fe885d2f95a455ed?rik=jXErREJ5GSDH%2fQ&riu=http%3a%2f%2fhintergrundbild.org%2fwallpaper%2ffull%2f5%2f0%2f6%2f49496-suesse-hintergrundbilder-fuers-handy-1080x1920-windows.jpg&ehk=tyJkAOYz66lqH5q1X9NJ5vaKvq285HYlIZloVfjq9ME%3d&risl=&pid=ImgRaw&r=0");
+            background-size: cover;
+        }
+        
+        .camera button {
+            background-color: white;
+            border-color: black;
+            border-width: 1px;
+            border-radius: 100px;
+        }
+        .touch-id button {
+            background-color: white;
+            border-color: black;
+            margin-top: 365px;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+        }
+        .on-off button {
+            width: 1px;
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+            border-color: white;
+            border-width: 1px;
+            border-radius: 2px;
+            margin-left: 123px;
+            position: fixed;
+        }
+        .setting button {
+            height: 70px;
+            width: 70px;
+            background-color: transparent;
+            border-width: 0px;
+            margin-left: -150px;
+        }
+        .setting img:hover {
+            height: 60px;
+            width: 60px;
+            transition: 0.2s;
+        }
+        
+       .setting-window input[type=":read-only"]{
+        height: 300px;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 0.418);
+        border-radius: 10px;
+        position: fixed;
+        margin-top: -400px;
+        margin-left: -100px;
+       }
+       .setting-window-option button {
+        margin-top: -400px;
+        margin-left: -100px;
+        background-color: rgba(0, 0, 0, 0.35);
+        width: 210px;
+        position: fixed;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-width: 0px;
+        height: 200px;
+       }
+       .setting-window-option a {
+        text-decoration: none;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: max-content;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 4px 4px 4px 4px;
+       }
+       .setting-window-option a:hover {
+        padding: 4px 7px 4px 7px;
+        transition: 0.2s;
+       }
+       .setting-window-option h3 {
+        color: white;
+        text-decoration: underline;
+       }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="rahmen">
+            <div id="TOUCH" class="innenrahmen">
+               
+                <div class="unter-rand">
+                    <div class="camera">
+                        <button></button>
+                    </div>
+                    <div class="setting">
+                        <button onclick="SETTING.style.display = 'block'"><img src="https://th.bing.com/th/id/R.46b3e762d7e29dfcce1c57c7ab6f9ce4?rik=0BfkB5XCVsDgtA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fiynque%2fios7-style%2f1024%2fSettings-icon.png&ehk=rssjNCq%2b5tj6rBc%2fDC%2fWZEftsqyRzHlEhDdiDNo2JOw%3d&risl=&pid=ImgRaw&r=0" height="50px" width="50px"></button>
+                        
+                    </div>
+                    <div class="on-off">
+                        <a href=""><button></button></a>
+                    </div>
+                    <div class="touch-id">
+                        <button onclick="SETTING.style.display = 'none'"></button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="SETTING" class="setting-window">
+            <input type=":read-only" disabled="disabled">
+            </input>
+            <div class="setting-window-option">
+                <button><h3>System</h3><br><a href="https://n-km.github.io/www-webbrowser/22-gg/-fastboot">Fastboot</a><br> <br><a href="https://n-km.github.io/www-webbrowser/22-gg">Back to Menu</a><br> <p style="color: white; margin-top: 15px;">Click on the home-button to exit.</p></button>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
