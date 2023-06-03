@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+<style>
+
+    body {
+        background-image: url("https://rare-gallery.com/uploads/posts/351193-4k-wallpaper.jpg");
+        background-size: cover;
+        font-family: Arial;
+    }
+    h1 {
+        color: white;
+    }
+    .contain {
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 500px;
+        width: 300px;
+        border-radius: 5px;
+    }
+    #yourBtn {
+  position: relative;
+  top: 150px;
+  font-family: calibri;
+  width: 150px;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px dashed #BBB;
+  text-align: center;
+  background-color: #DDD;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <center>
+        <div class="contain">
+            <h1>Upload</h1>
+            <br>
+            <br>
+            <br>
+            <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+                <div id="yourBtn" onclick="getFile()">click to upload a file</div>
+                <!-- this is your file input tag, so i hide it!-->
+                <!-- i used the onchange event to fire the form submission-->
+                <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile" type="file" value="upload" onchange="sub(this)" /></div>
+                <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                <!-- <input type="submit" value='submit' > -->
+              </form>
+             <script>
+                function getFile() {
+  document.getElementById("upfile").click();
+}
+
+function sub(obj) {
+  var file = obj.value;
+  var fileName = file.split("\\");
+  document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
+  document.myForm.submit();
+  event.preventDefault();
+}
+             </script>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <form action="https://n-km.github.io/www-webbrowser/22-gg/-cloud">
+                <button type="submit" style="padding: 10px; background-color: #DDD; border-width: 0px; border-radius: 10px; cursor: pointer;">Zurueck</button>
+             </form>
+        </div>
+    </center>
+</body>
+</html>
