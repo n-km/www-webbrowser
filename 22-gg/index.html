@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,7 +81,21 @@
             background-color: rgb(185, 185, 185);
             transition: 0.2s;
             cursor: pointer;
-
+            box-shadow: 3px 0px 3px 0px;
+        }
+        .mobile-user button {
+            padding: 50px 7px 50px 7px;
+            border-radius: 10px;
+            border-width: 0px;
+            cursor: pointer;
+            position: static;
+            float: left;
+        }
+        .mobile-user button:hover {
+            background-color: rgb(185, 185, 185);
+            transition: 0.2s;
+            cursor: pointer;
+            color: white;
         }
     </style>
 
@@ -90,7 +104,8 @@
 
 <body>
 
-
+    
+    <div class="mobile-user"><a href="-mbview"><button>I'am Mobile-User</button></a></div>
 <br>
     <div class="searchinterface">
         <label>
@@ -129,9 +144,9 @@
         <button class="dark" type="button" onclick="body.style.backgroundImage = 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAACVBMVEUwMDAsLCwxMTGsbUDcAAABb0lEQVR4nO3QQQ0AIBDAMA7/orHAXoSkVbBszeKaWcHs1wUfMSswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzDr3gFT/QH17Foa0wAAAABJRU5ErkJggg==)' ">Dark-Mode</button>
         <br>
         <button type="button" onclick="body.style.backgroundImage = 'url(https://free4kwallpapers.com/uploads/originals/2019/08/04/stone-wallpaper.jpg)'">Normal</button>
+        
         </div>
-       
+        
   
 
-
-</html>
+        </html>
