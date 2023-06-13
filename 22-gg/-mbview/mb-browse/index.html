@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse</title>
+<style>
+    body {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: arial;
+    background-image: linear-gradient(to left, rgb(0, 204, 255), yellow );
+}
+input {
+            border-radius: 0px;
+            border-color: rgb(0, 0, 0);
+            transition: 0.1s;
+            color: rgb(0, 0, 0);
+            outline: none;
+            border-width: 0px;
+            border-radius: 20px;
+            padding: 20px 20px 20px 20px;
+        }
+        input:hover {
+            border-color: rgb(0, 0, 0);
+            transition: 0.1s;
+        }
+        input:focus {
+            border-radius: 0px;
+            border-color: rgb(201, 201, 201);
+            transition: 0.1s;
+            color: rgb(0, 0, 0);
+            outline: none;
+            border-width: 0px;
+            border-radius: 20px;
+            padding: 20px 20px 20px 20px;
+            font-size: 25px;
+        }
+        .back button {
+            width: 400px;
+    border-radius: 0px;
+    height: 50px;
+    border-width: 0px;
+    background-color: rgba(255, 255, 255, 0.298);
+    color: rgb(0, 0, 0); 
+        }
+</style>
+</head>
+<body>
+    <div class="searchinterface">
+        <label>
+        <label for="browsers">   </label>
+       <input placeholder="Search in www" list="browsers" id="font-size" name="browsers">
+       <datalist id="font-size">
+         <option value="/9">9</option>
+         <option value="/12">12</option>
+         <option value="/17">17</option>
+         <option value="/24">24</option>
+         <option value="/33">33</option>
+         </datalist>
+         
+         
+         </div>
+        
+         <script>
+            document.getElementById('font-size').addEventListener('change',function(){
+                console.warn("Wait.for.accept:Code=", this.value);
+                
+                console.info("Accepted", this.value)
+              close.alert=this.button;
+              location.href=this.value;
+            })
+          </script>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="back"><a href="https://n-km.github.io/www-webbrowser/22-gg/-mbview"><button>X</button></a></div>
+</body>
+</html>
