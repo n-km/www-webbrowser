@@ -25,7 +25,7 @@
 }
 .text {
     background-color: rgba(255, 255, 255, 0.313);
-    height: 1400px;
+    height: max-content;
     width: 400px;
     font-size: 15px;
     padding: 10px;
@@ -54,6 +54,19 @@
     background-color: black;
     color: white; 
 }
+.script textarea {
+    background-color: rgba(0, 0, 0, 0.398);
+    color: rgb(255, 255, 255);
+    font-family: 'arial';
+    width: 400px;
+    height: 430px;
+    resize: none;
+    cursor: text;
+    padding: 9px;
+}
+.ordner-system {
+    display: flex;
+}
 </style>
 </head>
 <body>
@@ -64,6 +77,7 @@
         <div class="options-task" id="OPTIONS">
             <button onclick="OPTIONS.style.display = 'none'">close</button>
             <a href="mb-browse"><button>start browsing</button></a>
+            <a href=""><button>AI-School-system</button></a>
             <button>read more...</button>
         </div>
         <h1>What is a Browser?</h1>
@@ -72,7 +86,7 @@
         <img height="50px" width="50px" src="https://logonoid.com/images/microsoft-edge-logo.png">
         <br>
         <br>
-        <img width="80%" src="https://www.onlinecourses24x7.com/wp-content/uploads/2019/07/Internet-Network-Ecosystem.jpg">
+        <img width="420px" src="https://www.onlinecourses24x7.com/wp-content/uploads/2019/07/Internet-Network-Ecosystem.jpg">
         <br>
         <br>
         <div class="text">
@@ -101,6 +115,47 @@ Here are some key features and components commonly found in web browsers:
 10. Security Features: Browsers implement security measures to protect users from malicious websites and online threats. These may include features like phishing and malware protection, secure connections (HTTPS), and privacy controls.
 
 Web browsers come in different versions and are developed by various companies or organizations. Some of the popular web browsers include Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, and Opera. Each browser may have its own unique features, performance characteristics, and customization options, but they all serve the common purpose of enabling users to access and explore the vast world of the internet.
+        </div>
+        <h1>How does our browser work?</h1>
+        <div class="script">
+            <textarea disabled="disabled"><div class="searchinterface">
+                <label>
+                <label for="browsers">   </label>
+               <input placeholder="Search in www" list="browsers" id="font-size" name="browsers">
+               <datalist id="font-size">
+                 <option value="/9">9</option>
+                 <option value="/12">12</option>
+                 <option value="/17">17</option>
+                 <option value="/24">24</option>
+                 <option value="/33">33</option>
+                 </datalist>
+                 
+                 
+                 </div>
+                
+                 <script>
+                    document.getElementById('font-size').addEventListener('change',function(){
+                        console.warn("Wait.for.accept:Code=", this.value);
+                        
+                        console.info("Accepted", this.value)
+                      close.alert=this.button;
+                      location.href=this.value;
+                    })
+                  </script></textarea>
+        </div>
+        <div class="text">
+            The browser is search in self-made folders.
+            <br><br><br>
+            <div class="ordner-system">
+                <div class="ordner-system-picture">
+                    <img src="pictures/Screenshot 2023-06-13 191844.png" >
+                </div>
+                <div class="ordner-system-text">
+                    <h3>Filesystem</h3>
+                    <br>
+                    Currently you are in the "-mbview" folder in the index.html file.
+                </div>
+            </div>
         </div>
     </center>
     </div>
