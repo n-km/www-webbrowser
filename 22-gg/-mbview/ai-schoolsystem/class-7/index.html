@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📘AI-SCHOOLSYSTEM</title>
     <style>
+        html {
+            scroll-behavior: smooth
+        }
         body {
-            background-color: rgb(218, 218, 218);
+            background-image: linear-gradient(to right, rgb(36, 248, 255), white);
             font-family: arial;
             scrollbar-color: blue;
             scroll-snap-type: proximity;
         }
         .task {
-            background-color: rgb(163, 163, 163);
+            background-color: rgb(255, 255, 255);
             height: 30px;
             width: 100%;
         }
@@ -44,11 +47,16 @@
             width: 100%;
             background-image: linear-gradient(to right, rgb(36, 248, 255), white, white, white, white);
         }
+        .up {
+            background-color: white;
+            padding: 10px;
+            border-radius: 100px;
+        }
     </style>
 </head>
 <body>
-    <div class="task">
-        <a href="/www-webbrowser/22-gg/-mbview/ai-schoolsystem"><button>Back</button></a>
+    <div id="up" class="task">
+        <a href="/2/22-gg/-mbview/ai-schoolsystem"><button>Back</button></a>
         <button>Submit school material</button>
     </div>
     <p>based on <a href="https://schulstoff.org/index.php">https://schulstoff.org/index.php</a></p>
@@ -575,6 +583,9 @@
     <button>Physik</button>
     <button>Spanisch</button>
     <button>Wirtschaft und Recht</button>
+    </div>
+    <div class="up">
+        <a href="#up"><center><img height="70px" width="70px" src="https://th.bing.com/th/id/R.81fc0df0c49d8b6ef7a9a08785094a67?rik=AAjpBQKcJVU%2fpQ&pid=ImgRaw&r=0"></center></a>
     </div>
 </body>
 </html>
