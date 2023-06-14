@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘AI-SCHOOLSYSTEM</title>
+    <style>
+        body {
+            background-color: rgb(218, 218, 218);
+            font-family: arial;
+            scrollbar-color: blue;
+            scroll-snap-type: proximity;
+        }
+        .task {
+            background-color: rgb(163, 163, 163);
+            height: 30px;
+            width: 100%;
+        }
+        .task button {
+            width: max-content;
+            height: 100%;
+            border-width: 0px;
+            border-right-width: 1px;
+            margin-left: -3px;
+            cursor: pointer;
+        }
+        .task button:active {
+            background-color: rgba(255, 255, 255, 0.423);
+        }
+        .faecher a {
+            text-decoration: none;
+        }
+        .faecher button {
+            display: table;
+            width: 100%;
+            height: 50px;
+            border-radius: 0px;
+            border-width: 1px;
+            background-image: linear-gradient(to right, rgb(36, 248, 255), white, white, white);
+            
+        }
+        .textfeld {
+            height: max-content;
+            width: 100%;
+            background-image: linear-gradient(to right, rgb(36, 248, 255), white, white, white, white);
+        }
+    </style>
+</head>
+<body>
+    <div class="task">
+        <a href="/2/22-gg/-mbview/ai-schoolsystem"><button>Back</button></a>
+        <button>Submit school material</button>
+    </div>
+    <p>based on <a href="https://schulstoff.org/index.php">https://schulstoff.org/index.php</a></p>
+    <h1>Fächer</h1>
+    
+    <div class="faecher">
+        
+        <button onclick="BIOLOGIE.style.display='block'">Biologie</button>
+        
+        <div id="BIOLOGIE" style="display: none;"> 
+        <button onclick="BIOLOGIE.style.display='none'">⇑</button>
+        <div class="textfeld">Nothing there.</div>
+        </div>
+
+        <button onclick="CHEMIE.style.display='block'">Chemie</button>
+        <div id="CHEMIE" style="display: none;">
+        <button onclick="CHEMIE.style.display='none'">⇑</button>
+        <div class="textfeld">Nothing there.</div>
+        </div>
+
+        <button onclick="DEUTSCH.style.display='block'">Deutsch</button>
+        <div id="DEUTSCH" style="display: none;">
+        <button onclick="DEUTSCH.style.display='none'">⇑</button>
+        <div class="textfeld">Nothing there.</div>
+        </div>
+
+        <button onclick="ENGLISCH.style.display='block'">Englisch</button>
+        <div id="ENGLISCH" style="display: none;">
+            <button onclick="ENGLISCH.style.display='none'">⇑</button>
+            <div class="textfeld">Nothing there.</div>
+            </div>
+    
+        <button onclick="GEOGRAPHIE.style.display='block'">Geographie</button>
+        <div id="GEOGRAPHIE" style="display: none;">
+            <button onclick="GEOGRAPHIE.style.display='none'">⇑</button>
+            <div class="textfeld">
+                <main id="main">
+                    <div id="inhaltsverzeichnis">
+                        <div id="i_v"><b>Inhaltsverzeichnis</b>
+                            <span id="anz" onclick="inhaltsverzeichnis()" tabindex="0">[Anzeigen]</span>
+                            <span id="verb" onclick="inhaltsverzeichnis()" tabindex="0">[Verbergen]</span>
+                        </div>
+                        <ul>
+                            <li class="i1"><a href="#klima-in-europa">Das Klima in Europa</a></li>
+                                <li class="i2"><a href="#begriffserklaerung-wetter-klima">Begriffsklärung: Wetter und Klima</a></li>
+                                <li class="i2"><a href="#klimabeeinflussende-faktoren">Klimabeeinflussende Faktoren</a></li>
+                                <li class="i2"><a href="#klimaextreme-im-osten-europas">Klimaextreme im Osten Europas</a></li>
+                                <li class="i2"><a href="#boreales-klima-in-nordeuropa">Boreales Klima in Nordeuropa</a></li>
+                                <li class="i2"><a href="#atlantisches-meeresklima">Atlantisches Meeresklima</a></li>
+                                <li class="i2"><a href="#klima-in-mitteleuropa">Das Klima in Mitteleuropa</a></li>
+                            <li class="i1"><a href="#landwirtschaft-in-europa">Die Landwirtschaft in Europa</a></li>
+                                <li class="i2"><a href="#ueberblick-landwirtschaft-europa">Überblick</a></li>
+                                <li class="i2"><a href="#intensive-landwirtschaft-getreideanbau-frankreich">Intensive Landwirtschaft: Getreideanbau in Frankreich</a></li>
+                                <li class="i2"><a href="#bewaesserungsfeldbau-gewaechshaeuser-suedspanien">Bewässerungsfeldbau und Gewächshäuser in Südspanien</a></li>
+                                <li class="i2"><a href="#extensive-landwirtschaft-highland-britain">Extensive Landwirtschaft in Highland Britain</a></li>
+                            <li class="i1"><a href="#meere-europas">Die Meere Europas</a></li>
+                                <li class="i2"><a href="#oekosystem-meer">Das Ökosystem Meer – Am Beispiel des Binnenmeers Ostsee</a></li>
+                                <li class="i2"><a href="#fischfang-aquafarming">Fischfang: Aquafarming</a></li>
+                                <li class="i2"><a href="#erdoel-erdgas-nordsee">Erdöl und Erdgas aus der Nordsee</a></li>
+                                <li class="i2"><a href="#belastung-und-schutz-der-ostsee">Belastung und Schutz der Ostsee</a></li>
+                            <li class="i1"><a href="#erdbeben-und-vulkanismus">Erdbeben und Vulkanismus</a></li>
+                                <li class="i2"><a href="#erdbeben-in-europa">Erdbeben in Europa</a></li>
+                                    <li class="i3"><a href="#ursache-erdbeben">Ursache</a></li>
+                                <li class="i2"><a href="#vulkanismus-in-europa">Vulkanismus in Europa</a></li>
+                                    <li class="i3"><a href="#ursachen-vulkanismus">Ursachen</a></li>
+                                    <li class="i3"><a href="#nutzen-der-vulkane">Nutzen der Vulkane</a></li>
+                                    <li class="i3"><a href="#aktive-vulkane">Aktive Vulkane</a></li>
+                            <li class="i1"><a href="#wirtschaftsraeume">Wirtschaftsräume</a></li>
+                                <li class="i2"><a href="#seehafen-rotterdam">Seehafen Rotterdam</a></li>
+                                    <li class="i3"><a href="#gueterumschlag">Güterumschlag</a></li>
+                                    <li class="i3"><a href="#sonderfaktoren">Sonderfaktoren</a></li>
+                                <li class="i2"><a href="#fremdenverkehr-im-mittelmeerraum">Fremdenverkehr im Mittelmeerraum</a></li>
+                                    <li class="i3"><a href="#pushfaktoren-pullfaktoren-tourismus">Push- und Pullfaktoren für den Tourismus</a></li>
+                                    <li class="i3"><a href="#vorteile-nachteile-tourismus">Vor- und Nachteile</a></li>
+                            <li class="i1"><a href="#quellen">Quellen</a></li>
+                        </ul>
+                    </div>
+            
+            
+                    <h2 id="klima-in-europa">Das Klima in Europa</h2>
+                    <h3 id="begriffserklaerung-wetter-klima">Begriffsklärung: Wetter und Klima</h3>
+                    <p>
+                        Das Wetter ist das Zusammenspiel aller Wetterelemente an einem bestimmten Ort zu einer bestimmten Zeit.
+                        Zu den Elementen zählen Niederschlag, Temperatur, Luftdruck, Wind, Luftfeuchtigkeit und die
+                        Bewölkung.
+                    </p><p>
+                        Das Klima ist der durchschnittliche Wetterablauf in einem bestimmten Gebiet über einen längeren
+                        Zeitraum, häufig um die 100 Jahre.
+                    </p>
+            
+            
+                    <h3 id="klimabeeinflussende-faktoren">Klimabeeinflussende Faktoren</h3>
+                    <p>
+                        Das Klima wird von mehreren Faktoren stark beeinflusst:
+                    </p>
+                    <ul>
+                        <li>Breitenlage: je näher zum Äquator, desto wärmer wird es</li>
+                        <li>Höhenlage: je höher, desto kühler wird es</li>
+                        <li>Lage zum Meer: je größer die Entfernung zum Meer ist, desto weniger Jahresniederschlag gibt
+                            es</li>
+                        <li>warme oder kalte Meeresströmungen</li>
+                    </ul>
+                    <p>
+                        Europa hat großen Anteil an der Klimazone des gemäßigten Klimas.
+                    </p>
+                    <figure class="w50 rechts">
+                        <a href="../bilder/klimadiagramm-neapel.png" target="_blank"><img src="../bilder/klimadiagramm-neapel.png" loading="lazy" alt="Klimadiagramm von Neapel" title="Klimadiagramm von Neapel" width="585" height="314"></a>            <figcaption>
+                            Klimadiagramm von Neapel
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Nimmt man als Beispiel die Stadt Neapel in Italien, so kann man in einem Klimadiagramm erkennen, dass
+                        in den Sommermonaten Juli und August die Temperatur über der Niederschlagsmenge liegt. Zu dieser
+                        Zeit herrscht ein arides oder trockenes Klima, da die Verdunstung größer als der Niederschlag ist.
+                    </p><p>
+                        In den restlichen Monaten herrscht ein humides oder feuchtes Klima, da der Niederschlag größer
+                        als die Verdunstung ist.
+                    </p>
+            
+            
+                    <h3 id="klimaextreme-im-osten-europas">Klimaextreme im Osten Europas</h3>
+                    <p>
+                        Im Osten Europas herrscht ein kontinentales Klima. Durch die Lage im Innern des Kontinents fehlt der
+                        ausgleichende Einfluss des Meeres, wodurch es zwischen Sommer und Winter große Temperaturunterschiede
+                        gibt.
+                    </p><p>
+                        Die Sommer sind trocken und heiß, da sich der Kontinent schnell und stark aufheizt. Die Winter sind
+                        dagegen sehr kalt, weil sich der Boden schnell und stark abkühlt. Dies führt dazu, dass
+                        Frühjahr und Herbst relativ kurz sind.
+                    </p><p>
+                        Dieses Klima wirkt sich auch auf den Boden und auf die Fauna aus. So gibt es hochwertige Schwarzerde mit
+                        einem hohen Humusanteil, die für den Ackerbau genutzt wird, aber auch winterkalte Steppen (Grasland;
+                        in Afrika Savanne und in den USA Prärie), da es für Bäume meist zu trocken ist.
+                    </p><p>
+                        <b>Länder:</b> In Europa sind vom kontinentalen Klima betroffen: Ungarn, Ukraine, Bulgarien,
+                        Weißrussland und Rumänien.
+                    </p>
+            
+            
+                    <h3 id="boreales-klima-in-nordeuropa">Boreales Klima in Nordeuropa</h3>
+                    <p>
+                        Boreal bedeutet, zum rauen, nördlichen Klima gehörend. Dazu gehören die skandinavischen
+                        Länder und das nördliche Russland. Allgemein liegen die Gebiete nördlich des 60.
+                        Breitengrades.
+                    </p><p>
+                        Die Sommer sind kühl, kurz und niederschlagsreich, während der Winter sehr kalt und sehr lang
+                        (5-7 Monate) ist und ebenfalls hohe Niederschlagsmengen hat. Dadurch werden die Böden
+                        ausgespült und sind dadurch nährstoffarm.
+                    </p><p>
+                        Die Wachstumszeit ist für Pflanzen, Bäume und Sträucher zu gering. Je nördlicher man
+                        kommt, desto schlechter werden die Bedingungen für die Fauna. Deshalb gibt es große Flächen
+                        mit anspruchslosen Nadelwäldern, zum Beispiel die Taiga in Russland, und noch weiter nördlich
+                        ist die Tundra, die sich durch baumlosen Dauerfrostboden auszeichnet.
+                    </p>
+            
+            
+                    <h3 id="atlantisches-meeresklima">Atlantisches Meeresklima</h3>
+                    <p>
+                        Die Westküsten Frankreichs, Irlands und Großbritanniens haben Anteil am atlantischen Meeresklima.
+                    </p><p>
+                        Es zeichnet sich durch geringe Temperaturgegensätze zwischen m kühlen Sommer und dem milden Winter
+                        aus. Dies liegt daran, dass das Meer temperaturausgleichend wirkt, indem es im Sommer Wärme speichert
+                        und im Winter diese Wärme abgibt.
+                    </p><p>
+                        Zusätzlich beeinflusst der warme Golfstrom das Klima und durch die Westwinde und die feuchte Meeresluft
+                        gibt es hohe Niederschlagsmengen in den betroffenen Gebieten.
+                    </p>
+            
+            
+                    <h3 id="klima-in-mitteleuropa">Das Klima in Mitteleuropa</h3>
+                    <p>
+                        In Mitteleuropa wirken alle möglichen Luftmassen auf das Klima. Es wird deshalb auch als
+                        „Übergangsklima“ bezeichnet. Einflüsse sind:
+                    </p>
+                    <ul>
+                        <li>feuchte atlantische Meeresluft: führt zu kühlen Sommern und milden Wintern</li>
+                        <li>tropische Meeresluft: bringt im Sommer sehr schwüle und warme Luft</li>
+                        <li>subtropische Warmluft (aus Nordafrika): führt zu heißen trockenen Sommer</li>
+                        <li>trockene kontinentale Luft: führt zu warmen und trockenen Sommer und zu einem sehr kalten
+                            und trockenen Winter</li>
+                        <li>polare Kaltluft: bringt im Winter sehr kalte Luft und Schnee</li>
+                    </ul>
+            
+            
+                    <div class="werbung-text">
+                        <hr>
+                        <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- Werbung im Text -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6728256015637913" data-ad-slot="1222366588" data-ad-format="auto" data-adsbygoogle-status="done"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        
+                        <hr>
+                    </div>
+            
+                    <h2 id="landwirtschaft-in-europa">Die Landwirtschaft in Europa</h2>
+                    <h3 id="ueberblick-landwirtschaft-europa">Überblick</h3>
+                    <p>
+                        In Europa gibt es Gunst- und Ungunstgebiete für die Landwirtschaft. Es ist möglich intensiven
+                        Ackerbau und intensive Viehwirtschaft zu betreiben. Außerdem kann man am Mittelmeer
+                        Zitrusfrüchte, Oliven, Wein oder Obst anbauen.
+                    </p><p>
+                        Ungunstgebiete dagegen sind die Waldgebiete der kalten und gemäßigten Zonen, die Eis- und
+                        Hochgebirgsregion, der trockene Hartlaubwald sowie die Gebüsche im Mittelraum, die Tundra und Moore
+                        und die Wüsten beziehungsweise die Halbwüsten.
+                    </p><p>
+                        Ob ein Gebiet ein Gunst- oder Ungunstgebiet ist, ist abhängig von dem Klima, dem Boden und auch von
+                        der Oberflächenform.
+                    </p>
+            
+            
+                    <h3 id="intensive-landwirtschaft-getreideanbau-frankreich">Intensive Landwirtschaft: Getreideanbau in Frankreich</h3>
+                    <p>
+                        Frankreich ist der viertgrößte Weizenproduzent der Welt und im Großraum Paris wird sehr
+                        viel davon angebaut. Bedingungen hierfür sind, dass ein großes Tiefland mit fruchtbaren
+                        Böden, ein gemäßigtes Klima und keine Gebirge vorhanden sind.
+                    </p><p>
+                        Unter dem Begriff „intensiver Getreideanbau“ versteht man, dass man hochwertiges Saatgut, das
+                        häufig genmanipuliert ist, verwendet und große Betriebsflächen besitzt, die nur mit
+                        großen Maschinen bearbeitet werden können. Außerdem werden Monokulturen über eine
+                        Fläche von ungefähr 30-40 Hektar angebaut. Die Schädlingsbekämpfung und das
+                        Düngen wird mit chemischen Mitteln vorgenommen.
+                    </p><p>
+                        Das Ziel hierbei ist, dass man mit möglichst wenig Kosten und Arbeitskräften billig hohe
+                        Erträge erzielen kann.
+                    </p>
+            
+            
+                    <h3 id="bewaesserungsfeldbau-gewaechshaeuser-suedspanien">Bewässerungsfeldbau und Gewächshäuser in Südspanien</h3>
+                    <p>
+                        Auf den sogenannten Huertas (spanisch: Obst- und Gemüsegärten) wird das Land durch
+                        Bewässerungsfeldbau intensiv genutzt.
+                    </p><p>
+                        <b>Techniken:</b> Zum Bewässern nimmt man Grund- oder Flusswasser, dessen Wasser durch Wasserleitungen,
+                        wie dem Tajo-Segura Kanal, zu den Feldern geleitet wird. Es werden Furchen-, Tropf- und Sprinkleranlagen
+                        genutzt.
+                    </p><p>
+                        <b>Vorteile:</b> Trotz langer Trockenheit können die Erträge gesichert werden und durch mehrere
+                        Ernten pro Jahr aufgrund längerer Wachstumszeiten können jene zudem erhöht werden.
+                    </p><p>
+                        <b>Probleme:</b> Da im Sommer noch viele Touristen nach Spanien kommen, besteht hier eine doppelte Belastung
+                        für das Grundwasser. Außerdem geht sehr viel Wasser bei der Furchen- und
+                        Sprinklerbewässerung verloren, durch die hohe Verdunstung versalzt der Boden und der Grundwasserspiegel
+                        wird abgesenkt.
+                    </p>
+            
+            
+                    <h3 id="extensive-landwirtschaft-highland-britain">Extensive Landwirtschaft in Highland Britain</h3>
+                    <p>
+                        Zu den Highlands gehören die Bergländer Schottlands, Wales' und Südwestenglands. Diese
+                        Gegenden sind dünn besiedelt und geprägt von Mooren, Heide- und Graslandschaften.
+                    </p><p>
+                        Da die landwirtschaftliche Nutzung schwierig ist, betreibt man eine extensive Weidewirtschaft, bei der
+                        man möglichst wenig Kosten aufbringt, um Erträge zu erzielen. Dabei werden spezielle, sehr
+                        widerstandsfähige Schaf- und Rinderrassen, die an das Klima angepasst sind, auf Naturweiden
+                        gebracht. Diese liefern dann Fleisch und Wolle.
+                    </p>
+            
+            
+                    <div class="werbung-text">
+                        <hr>
+                        <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- Werbung im Text -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6728256015637913" data-ad-slot="1222366588" data-ad-format="auto" data-adsbygoogle-status="done"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        
+                        <hr>
+                    </div>
+            
+                    <h2 id="meere-europas">Die Meere Europas</h2>
+                    <h3 id="oekosystem-meer">Das Ökosystem Meer – Am Beispiel des Binnenmeers Ostsee</h3>
+                    <p>
+                        Die Ostsee ist ein flaches Meer, das vom Ozean weitgehend abgeschlossen ist. Es ist nur durch die schmalen
+                        Meerengen Kattegat und Skagerrak mit der Nordsee verbunden.
+                    </p><p>
+                        <b>Ökosystem:</b> Unter einem Ökosystem versteht man die Wechselwirkung zwischen Menschen, Tieren,
+                        Pflanzen, dem Boden beziehungsweise dem Wasser und dem Klima.
+                    </p><p>
+                        Die Ostsee hat einen geringen Salzgehalt, da dass Salzwasser aus der Nordsee durch Niederschläge
+                        und durch Süßwasser aus Flüssen „verdünnt wird“. Dabei trennt sich das
+                        Wasser in zwei Bereiche, die durch eine Trennschicht auseinandergehalten werden: Die obere ist
+                        sauerstoffreich, warm, salzarm und voller Leben, während die untere sauerstoffarm, kalt, salzreich
+                        und lebensfeindlich ist.
+                    </p>
+            
+            
+                    <h3 id="fischfang-aquafarming">Fischfang: Aquafarming</h3>
+                    <p>
+                        Grundsätzlich gibt es zwei Arten Fische als Nahrungsmittel bereitzustellen. Zum einen gibt es die
+                        Küstenfischerei, bei der in Mündungsgebieten von Flüssen oder in Küstennähe
+                        die Tiere gefangen werden. Dabei werden kleine Kutter verwendet, die Frischfisch liefern, zum Beispiel
+                        Dorsch, Scholle, Seezunge oder Krabben.
+                    </p><p>
+                        Zum anderen wird Hochseefischerei betrieben, bei denen die Schiffe häufig mehrere Monate am Stück
+                        unterwegs sind. Dabei liegen die Fanggründe im Nordatlantik. Die Fische werden außerdem schon
+                        zu Fischfilets verarbeitet und tiefgekühlt, weshalb man auch von „Fabrikschiffen“ redet.
+                        Das Problem hierbei ist, dass Grundschleppnetze verwendet werden, das heißt ein Netz wird auf bis auf
+                        den Meeresboden hinabgelassen und es wird alles gefangen, was hineingetrieben wird. Dadurch werden auch
+                        Eier von Fischen zerstört, was zur Folge hat, dass die Fische nicht genug Nachkommen kriegen und deren
+                        Zahl stark sinkt.
+                    </p><p>
+                        Die Fische dienen als Nahrung und werden auch zu Industriefisch (Fischmehl) verarbeitet.
+                    </p>
+            
+            
+                    <h3 id="erdoel-erdgas-nordsee">Erdöl und Erdgas aus der Nordsee</h3>
+                    <p>
+                        Vor allem Norwegen und Großbritannien aber auch die Niederlanden und Dänemark betreiben
+                        in der Nordsee Offshore-Förderungsanlagen, das heißt sie gewinnen Erdöl und Erdgas
+                        unter dem Meer.
+                    </p><p>
+                        Das Öl wird mithilfe von Unterwasser-Pipelines, Tankschiffen und Tankhäfen exportiert, wobei
+                        hohe Produktionskosten entstehen, da auch der technische Aufwand zur Suche von Ölfeldern teuer ist.
+                        Dennoch können hohe Gewinne erzielt werden. Sollte jedoch Erdöl freigesetzt werden, so hat dies
+                        meist weitreichende Schäden in der Umwelt zu Folge.
+                    </p><p>
+                        Der Staat unterstützt dies aber, da dadurch hohe Steuereinnahmen erzielt werden können und dadurch
+                        Rücklagen für die Zukunft angelegt werden können. Außerdem entstehen für die
+                        Bevölkerung neue Berufe und die Angestellten haben bessere Verdienstmöglichkeiten, da diese oft
+                        noch einen Gefahrenzuschlag erhalten.
+                    </p>
+            
+            
+                    <h3 id="belastung-und-schutz-der-ostsee">Belastung und Schutz der Ostsee</h3>
+                    <p>
+                        Bei der Ostsee besteht das Problem, dass der Wasseraustausch stark eingeschränkt ist, da sie ein
+                        Binnenmeer ist. Dadurch wirken sich Verschmutzungen und Belastungen stärker aus:
+                    </p>
+                    <ul>
+                        <li>Flüsse sammeln verschiedenste Schadstoffe, wobei Stickstoff aus der Landwirtschaft das Hauptproblem
+                            darstellt, da es wie Dünger wirkt.</li>
+                        <li>Durch die Atmosphäre wird die Ostsee von den Abgasen von Autos, von Industrien und von Haushalten
+                            zusätzlich belastet.</li>
+                        <li>Die größte Belastung stellt die Küstenindustrie dar, die ihre Abwässer ungereinigt
+                            in das Meer leiten. Außerdem wird die Ostsee durch die Erdölförderung, durch Öltanks
+                            und auch durch Tankerunfälle verschmutzt. Vor allem in den östlichen Ländern Europas
+                            wird zudem der Giftmüll im Wasser versenkt.</li>
+                    </ul>
+                    <p>
+                        Diese drei Faktoren führen zu einer Eutrophierung durch das Stickstoff und durch Phosphate, was dazu
+                        führt, dass mehr Algen wachsen und sich Plankton anreichert. Das Resultat ist ein Sauerstoffmangel und
+                        durch das Zersetzen von Biomasse entstehen Fäulnisgase. Diese setzen neue giftige Stoffe frei, wodurch
+                        die Tier- und Pflanzenwelt stark geschädigt wird.
+                    </p>
+            
+            
+                    <div class="werbung-text">
+                        <hr>
+                        <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- Werbung im Text -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6728256015637913" data-ad-slot="1222366588" data-ad-format="auto" data-adsbygoogle-status="done"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        
+                        <hr>
+                    </div>
+            
+                    <h2 id="erdbeben-und-vulkanismus">Erdbeben und Vulkanismus</h2>
+                    <p>
+                        Erdbeben sowie Vulkane treten in Europa auf.
+                    </p>
+            
+                    
+                    <h3 id="erdbeben-in-europa">Erdbeben in Europa</h3>
+                    <h4 id="ursache-erdbeben">Ursache</h4>
+                    <p>
+                        Die Erdkruste ist keine feste Masse, sondern sie ist in feste Platten zerbrochen. Diese bewegen sich
+                        auf der „Fließzone“ und wenn sich zwei Platten „verhaken“ baut sich eine
+                        große Spannung auf, die sich ruckartig löst. Dies wird als Erdbeben wahrgenommen, das nur wenige
+                        Sekunden dauert.
+                    </p><p>
+                        Der Punkt, unter dem das Erdbeben sich ausbreitet, nennt man Epizentrum. Von diesem Zentrum aus, verbreiten
+                        sich die Wellen um die ganze Welt, wo sie auch überall gemessen werden können. Man verwendet zum
+                        Messen der Stärke einen Seismographen und die Richterskala zum Anzeigen der Stärke.
+                    </p><p>
+                        In Europa treffen drei Platten aufeinander: die eurasische, die türkisch-griechische und die
+                        afrikanische Platte. Deshalb ist der Mittelmeerraum stark erdbebengefährdet.
+                    </p>
+            
+            
+                    <h3 id="vulkanismus-in-europa">Vulkanismus in Europa</h3>
+                    <h4 id="ursachen-vulkanismus">Ursachen</h4>
+                    <div class="flexrahmen">
+                        <figure class="w40">
+                            <a href="../bilder/schichtvulkan.jpg" class="helldunkel" target="_blank"><img src="../bilder/schichtvulkan.jpg" loading="lazy" alt="Schichtvulkan" title="Schichtvulkan" width="375" height="256"></a>                <figcaption>
+                                Schichtvulkan<sup id="vw-4-1"><a href="#fn-4-1">[1]</a><span class="fn">commons.wikimedia.org, SEWilco</span></sup>                </figcaption>
+                        </figure>
+                        <figure class="w40">
+                            <a href="../bilder/schildvulkan.svg" class="helldunkel" target="_blank"><img src="../bilder/schildvulkan.svg" loading="lazy" alt="Schildvulkan" title="Schildvulkan" width="1100" height="1100"></a>                <figcaption>
+                                Schildvulkan<sup id="vw-4-2"><a href="#fn-4-2">[2]</a><span class="fn">commons.wikimedia.org, Sémhur</span></sup>                </figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        Entlang der Plattengrenzen gibt es in der Tiefe Magmakammern. Das Magma drückt durch einen Vulkanschlot
+                        nach oben und Lava kann im Krater austreten. Dieses erkaltet und erstarrt schließlich. Treten Asche
+                        und Gase aus, spricht man von einem „Vulkanregen“. Ist der Ausbruch stärker, besteht eine
+                        Gefahr durch heiße Geröll- und Schlammlawinen.
+                    </p>
+            
+                    <h4 id="nutzen-der-vulkane">Nutzen der Vulkane</h4>
+                    <p>
+                        Für die Landwirtschaft eignet sich der Boden sehr gut zum Anbauen von Gemüse, Wein und Obst, da
+                        die Böden sehr fruchtbar und Wärme speichernd sind. Für den Tourismus spielt es eine Rolle,
+                        da Geysire und Mineralquellen Besucher anziehen.
+                    </p><p>
+                        Außerdem kann man mit der Erdwärme sauber und billig Strom erzeugen und das Vulkangestein
+                        abbauen und als Bimsstein oder Basalt verkaufen.
+                    </p>
+            
+                    <h4 id="aktive-vulkane">Aktive Vulkane</h4>
+                    <p>
+                        In Süditalien ist der Vesuv bei Neapel, der Ätna auf Sizilien und der Stromboli auf den
+                        Ligurischen Inseln vor Sizilien. Island ist insgesamt eine Vulkaninsel, die entlang dem
+                        „mittelatlantischen Rücken“ liegt.
+                    </p>
+            
+            
+                    <div class="werbung-text">
+                        <hr>
+                        <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- Werbung im Text -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6728256015637913" data-ad-slot="1222366588" data-ad-format="auto" data-adsbygoogle-status="done"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        
+                        <hr>
+                    </div>
+            
+                    <h2 id="wirtschaftsraeume">Wirtschaftsräume</h2>
+                    <h3 id="seehafen-rotterdam">Seehafen Rotterdam</h3>
+                    <p>
+                        Der Seehafen von Rotterdam ist nach Güterumschlag mit circa 330 Millionen Tonnen Güter pro Jahr
+                        der größte Seehafen der Welt. Die größten Seeschiffe laufen hier ein und versorgen
+                        Europa mit Gütern aller Art, die aus aller Welt kommen.
+                    </p>
+            
+                    <h4 id="gueterumschlag">Güterumschlag</h4>
+                    <p>
+                        <b>Massengüter:</b> Dies sind Güter, für die man spezielle Hafenanlagen zum
+                        „Löschen“ benötigt, zum Beispiel Rohöl und Erdölprodukte, Eisenerz und
+                        Getreide sowie Saatgut.
+                    </p><p>
+                        <b>Stückgüter:</b> Dies sind Güter, die man in Containern befördern kann, wie Autos,
+                        Maschinen, Produktionsanlagen, Papier, Textilien oder Möbel. Der Vorteil des Containerumschlags ist,
+                        dass durch Standardmaß die Behälter stapelbar sind, auf LKWs und Güterzüge passen,
+                        Containerschiffe große Mengen befördern können sowie ein schnelles und kostengünstiges
+                        „Umschlagen“ möglich machen.
+                    </p>
+            
+                    <h4 id="sonderfaktoren">Sonderfaktoren</h4>
+                    <p>
+                        Den Standort Rotterdam machen verschiedene Faktoren attraktiv:
+                    </p>
+                    <ul>
+                        <li>Mündung des Rheins und der Maas sowie ein verzweigtes Binnenwassernetz</li>
+                        <li>Lage direkt an der Küste mit tiefer Fahrrinne für Hochseeschiffe</li>
+                        <li>Zentrale Lage zu den größten Wirtschaftsräumen in Europa</li>
+                        <li>Hervorragende Verkehrsanbindung (Straßen, Schienen, Pipelines)</li>
+                        <li>Modernste Hafenanlage für einen schnellen Güterumschlag (Liegezeit ist teuer)</li>
+                    </ul>
+            
+            
+                    <h3 id="fremdenverkehr-im-mittelmeerraum">Fremdenverkehr im Mittelmeerraum</h3>
+                    <p>
+                        Jährlich reisen über 200 Millionen Menschen in den Mittelmeerraum, um dort Urlaub zu machen.
+                        Dabei stellt sich die Frage, ob dies überwiegend Vorteile oder Nachteile bringt.
+                    </p>
+            
+                    <h4 id="pushfaktoren-pullfaktoren-tourismus">Push- und Pullfaktoren für den Tourismus</h4>
+                    <p>
+                        <b>Urlauber wünschen (Pullfaktoren):</b> Sie wollen viel Sonne und wenig Regen, ein warmes Meer und
+                        eine fremde Kultur mit einer schönen Landschaft.
+                    </p><p>
+                        <b>Urlauber haben (Pushfaktoren):</b> Sie besitzen genug Geld, um Urlaub zu machen, haben immer mehr Freizeit,
+                        haben ein großes Erholungsbedürfnis und sind durch das Auto oder Flugzeug in der Lage die Ziele
+                        innerhalb kurzer Zeit zu erreichen.
+                    </p>
+            
+                    <h4 id="vorteile-nachteile-tourismus">Vor- und Nachteile</h4>
+                    <p>
+                        Vorteile vom Tourismus sind:
+                    </p>
+                    <ul>
+                        <li>viele Arbeitsplätze im Tourismusgewerbe</li>
+                        <li>Arbeitsplätze im Zuliefergewerbe</li>
+                        <li>Tourismus als Arbeitgeber in nachgelagerten Bereichen (Landwirtschaft, Baugewerbe)</li>
+                        <li>Aufbau von Infrastruktur; zum Beispiel Verkehrsnetz, Gastronomie, medizinische Versorgung oder
+                            Erholungsanlagen</li>
+                    </ul>
+                    <p>
+                        Nachteile hingegen sind:
+                    </p>
+                    <ul>
+                        <li>Arbeitsplätze sind auf Saisons beschränkt</li>
+                        <li>Küsten(über)erschließung, Bedrohung von Küsten</li>
+                        <li>Ökologische Probleme: hoher Wasserbedarf, Verschmutzung</li>
+                        <li>Große Abhängigkeit von den Urlauberwünschen</li>
+                        <li>Überfremdung: Zuzug von Fremden und Verlust der eigenen Kultur</li>
+                    </ul>
+            
+            
+                    <hr class="qu1">
+                    <hr class="qu2">
+            
+            
+                    <h2 id="quellen">Quellen</h2>
+                    <ol class="fussnoten">
+                        <li class="gliederung" value="0">Erdbeben und Vulkanismus</li>
+                            <li id="fn-4-1"><a href="#vw-4-1" class="pfeil">↑</a><a href="https://upload.wikimedia.org/wikipedia/commons/4/4f/Stratovolcano.jpg" target="_blank" rel="nofollow">commons.wikimedia.org</a>, SEWilco</li>
+                            <li id="fn-4-2"><a href="#vw-4-2" class="pfeil">↑</a><a href="https://upload.wikimedia.org/wikipedia/commons/a/ae/Hawaiian_Eruption-numbers.svg" target="_blank" rel="nofollow">commons.wikimedia.org</a>, Sémhur</li>
+                    </ol>
+                </main>
+            </div>
+            </div>
+    <button>Geschichte</button>
+    <button>Informatik</button>
+    <button>Latein</button>
+    <button>Mathematik</button>
+    <button>Physik</button>
+    <button>Spanisch</button>
+    <button>Wirtschaft und Recht</button>
+    </div>
+</body>
+</html>

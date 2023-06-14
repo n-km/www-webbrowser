@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘AI-SCHOOLSYSTEM</title>
+    <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/R.0d34f174c35e8db027b1a8ba59d61aef?rik=B3r%2fZeRMhc8plg&riu=http%3a%2f%2ficons.veryicon.com%2fpng%2fApplication%2fAdobe+CS5+1%2fai.png&ehk=rPEgLYfNPduJoXDtzJST1ntsIch%2bRdsVK5on4mNKea4%3d&risl=&pid=ImgRaw&r=0">
+    <style>
+        body {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: arial;
+    background-image: linear-gradient(to left, rgb(0, 204, 255), yellow );
+}
+.logo {
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 100px;
+    background-image: linear-gradient(to right, black, transparent);
+}
+.options button {
+    width: 400px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 50px;
+    margin-top: 10px;
+    border-width: 0px;
+    background-color: black;
+    color: white;   
+    cursor: pointer;
+}
+.options button:hover {
+    transition: 0.1s;
+    background-color: rgba(0, 0, 0, 0.511);
+} 
+.options-task {
+    height: 400px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.415);
+    display: none;
+}
+.options-task button {
+    width: 400px;
+    border-radius: 0px;
+    height: 50px;
+    border-width: 0px;
+    background-color: black;
+    color: white; 
+}
+.options-task button:hover {
+    background-color: rgba(0, 0, 0, 0.415);
+    transition: 0.1s;
+}
+.classes {
+    display: flex;
+    justify-content: center;
+}
+.class-7 button{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: chartreuse;
+    font-size: 18px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.class-7 button:hover {
+    border-width: 1px;
+    background-color: rgba(128, 255, 0, 0.512);
+}
+.class-8 button{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(30, 244, 255);
+    font-size: 18px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.class-8 button:hover {
+    border-width: 1px;
+    background-color: rgba(30, 244, 255, 0.511);
+}
+.class-9 button{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(255, 62, 62);
+    font-size: 18px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.class-9 button:hover {
+    border-width: 1px;
+    background-color: rgba(255, 62, 62, 0.463);
+}
+.class-10 button{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(230, 90, 255);
+    font-size: 18px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.class-10 button:hover {
+    border-width: 1px;
+    background-color: rgba(230, 90, 255, 0.464);
+}
+    </style>
+</head>
+<body>
+    <center>
+        <div class="logo"></div>
+        <div class="options"><button onclick="OPTIONS.style.display = 'block'">options</button></div>
+        <div class="options-task" id="OPTIONS">
+            <button onclick="OPTIONS.style.display = 'none'">x</button>
+            <a href="class-7"><button>classe 7</button></a>
+            <a href="class-8"><button disabled="disabled">classe 8</button></a>
+            <a href="class-9"><button disabled="disabled">classe 9</button></a>
+            <a href="class-10"><button disabled="disabled">classe 10</button></a>
+            <a href=""><button>Back to "What is a Browser?"</button></a>
+        </div>
+        <br>
+        <br>
+        <div class="classes">
+            <div class="left-classes">
+                <div class="class-7"><a href="class-7/"><button>class 7</button></a></div>
+            <div class="class-8"><button>class 8</button></div>
+            </div>
+            <div class="right-classes">
+                <div class="class-9"><button>class 9</button></div>
+                <div class="class-10"><button>class 10</button></div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
