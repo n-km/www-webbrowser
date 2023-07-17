@@ -1,4 +1,4 @@
-<html>
+<html DOCTYPE="html">
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
             justify-content: center;
             font-family: arial;
             margin-top: 150px;
-            background-image: url("https://free4kwallpapers.com/uploads/originals/2019/08/04/stone-wallpaper.jpg");
+            background-color: rgb(69, 224, 255);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -25,6 +25,12 @@
             border-width: 0px;
             border-radius: 20px;
             padding: 20px 20px 20px 20px;
+            right: 40%;
+            left: 40%;
+            bottom: 50%;
+            top: 45%;
+            position: fixed;
+            height: 5%;
         }
         input:hover {
             border-color: rgb(0, 0, 0);
@@ -57,6 +63,8 @@
             border-radius: 5px;
             display: inline-block;
             padding: 8px 8px 8px 8px;
+            width: max-content;
+            height: max-content;
         }
        
         .grass {
@@ -70,6 +78,11 @@
         .bg {
             background-color: transparent;
             display: table;
+            position: fixed;
+            top: auto;
+            bottom: 0px;
+            left: 0px;
+            right: auto;
         }
         .bg button {
             width: 120px;
@@ -83,29 +96,117 @@
             cursor: pointer;
             box-shadow: 3px 0px 3px 0px;
         }
-        .mobile-user button {
-            padding: 50px 7px 50px 7px;
-            border-radius: 10px;
-            border-width: 0px;
-            cursor: pointer;
-            position: static;
+       
+        .banner {
+            position: fixed;
             float: left;
+            top: 0px;
+            bottom: auto;
+            right: auto;
+            left: 0px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            height: 3%;
         }
-        .mobile-user button:hover {
-            background-color: rgb(185, 185, 185);
-            transition: 0.2s;
+        .help {
+            position: fixed;
+            left: 40%;
+            right: 40%;
+            bottom: 0px;
+            top: auto;
+        }
+        .settings {
+            position: fixed;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            left: 0px;
+            right: auto;
+            top: 8%;
+            bottom: auto;
+        }
+        .settings img {
+            height: 8%;
+            width: 10ch;
             cursor: pointer;
-            color: white;
+            border-radius: 100%;
+        }
+        .settings img:hover {
+            transform: rotate(90deg);
+            transition: 0.2s;
+            box-shadow: 0px 0px 1px 1px black inset;
+        }
+        .settings img:active {
+            box-shadow: 0px 0px 2px 2px black inset;
+            transition: 0.2s;
+        }
+        .settings img::after {
+            transform: rotate(180deg);
+            transition: 0.2s;
+        }
+        .options {
+            display: none;
+            position: fixed;
+            background-color: white;
+            left: 0px;
+            top: 20%;
+            right: auto;
+            border-top-width: auto;
+            height: 35%;
+            width: 12.3ch;
+        }
+        .options button {
+            width: 100%;
+            height: 10%;
+            background-color: white;
+            border-radius: 0px;
+            border-width: 1px;
+            cursor: pointer;
+        }
+        .options button:hover {
+            background-color: rgba(0, 0, 0, 0.303);
+            transition: 0.2s;
         }
     </style>
 
-<style>@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Light.otf") format("opentype");font-weight:300;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Regular.otf") format("opentype");font-weight:400;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Medium.otf") format("opentype");font-weight:500;font-style:normal}@font-face{font-family:"euclid";src:url("chrome-extension://ebgofhigpedaepplnmglnedbfjemmpnh/static/fonts/EuclidCircularA-Bold.otf") format("opentype");font-weight:600;font-style:normal}</style><style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa">
 </head>
 
 <body>
-
-    
-    <div class="mobile-user"><a href="-mbview"><button>I'am Mobile-User</button></a></div>
+<div class="banner"><center>Du bist auf dem Handy? <a href="-mbview/">Geh hier rauf!</a></center></div>
+    <div class="settings" onclick="OPTIONS.style.display = 'block'"><img src="https://cdn2.iconfinder.com/data/icons/basic-ui-elements-circle/512/Bullet_list_menu_options-512.png"></div>
+    <div class="options" id="OPTIONS">  
+        <button onclick="OPTIONS.style.display = 'none'">Schließen</button>
+        <button onclick="HELP.style.display = 'block'">Hilfe</button>
+        <div id="HELP" class="help" style="display: none; background-color: white; left: 12.3ch; right: auto; top: 20%; bottom: auto; width: 24.6ch; height: 35%; ">
+        <button onclick="HELP.style.display = 'none'">Schließen</button>
+        <br>
+        <h4 style="margin-bottom: 20px;">Kommandos:</h4>
+        -Abstimmung
+        <br>
+        -admin
+        <br>
+        -cloud
+        <br>
+        -editor
+        <br>
+        -fastboot
+        <br>
+        -filemanager
+        <br>
+        -help
+        <br>
+        -launcher
+        <br>
+        -mbview
+        <br>
+        -mobile
+        <br>
+        -papp
+        </div>
+    </div>
+   
 <br>
     <div class="searchinterface">
         <label>
@@ -134,7 +235,7 @@
   <br>
   <br>
   <br>
-  <p>Tippe "-help" für Hilfeleistung.</p>
+  <p class="help">Tippe "-help" für Hilfeleistung.</p>
 <br><br>
        <div class="bg">
         <button class="grass" type="button" onclick="body.style.backgroundImage = 'url(https://img3.wallspic.com/attachments/originals/0/4/4/3/0/103440-grazing-vegetation-grassland-tree-wall-4096x2160.jpg)' ">Grass-mode</button>
@@ -143,10 +244,10 @@
         <br>
         <button class="dark" type="button" onclick="body.style.backgroundImage = 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAACVBMVEUwMDAsLCwxMTGsbUDcAAABb0lEQVR4nO3QQQ0AIBDAMA7/orHAXoSkVbBszeKaWcHs1wUfMSswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzDr3gFT/QH17Foa0wAAAABJRU5ErkJggg==)' ">Dark-Mode</button>
         <br>
-        <button type="button" onclick="body.style.backgroundImage = 'url(https://free4kwallpapers.com/uploads/originals/2019/08/04/stone-wallpaper.jpg)'">Normal</button>
-        
+        <button type="button" onclick="body.style.backgroundImage = 'url(https://free4kwallpapers.com/uploads/originals/2019/08/04/stone-wallpaper.jpg)'">Stone</button>
+        <br>
+        <button type="button" onclick="body.style.background = 'rgb(69, 224, 255)'">Normal</button>
         </div>
-        
-  
 
-        </html>
+</body>
+  </html>
