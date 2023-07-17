@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.xivewnAyZK22SIIerRUWvQHaHZ?pid=ImgDet&rs=1">
+    <title>Play Store</title>
+<style>
+    body {
+        background-color: rgb(181, 181, 181);
+        height: 50cm;
+    }
+    .leiste {
+        background-color: black;
+        height: 53px;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        bottom: auto;
+        left: 0px;
+        right: auto;
+    }
+    .logo{
+        background-image: url("https://th.bing.com/th/id/OIP.xivewnAyZK22SIIerRUWvQHaHZ?pid=ImgDet&rs=1");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-width: 2px;
+        border-style: dotted;
+        border-color: rgb(255, 255, 255);
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        left: 0px;
+        right: auto;
+        bottom: auto;
+        top: 0px;
+        border-radius: 10px;
+    }
+    input[type="search"] {
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        position: fixed;
+        bottom: auto;
+        top: 0px;
+        left: 50px;
+        right: auto;
+        outline: none;
+        border-width: 0px;
+        height: 50px;
+        margin-left: 10px;
+        border-width: 2px;
+        border-color: white;
+        border-style: dotted;
+        }
+    .apps {
+        margin-top: 60px;
+        display: table;
+    }
+    .app {
+        height: 10ch;
+        width: 10ch;
+        background-color: white;
+        background-size: 100%;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .app img {
+        border-radius: 10px;
+    }
+    .app:hover {
+        background-color: rgba(255, 255, 255, 0.512);
+    }
+    .block {
+        display: flex;
+    }
+    .ad {
+        position: fixed;
+        left: auto;
+        right: 0px;
+        bottom: 0px;
+        top: auto;
+        padding: 10px;
+        background-color: white;
+        
+    }
+    .cookies {
+        background-color: rgba(0, 0, 0, 0.448);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        padding: 0px;
+        right: 0px;
+        left: 0px;
+        top: 50px;
+    }
+    .cookies center {
+        width: 80%;
+        
+    }
+    .accept {
+        color: white;
+        font-family: arial;
+        font-size: 20px;
+    }
+    .accept button {
+        padding: 10px;
+        background-color: rgb(0, 170, 255);
+        border-width: 0px;
+        width: 40%;
+        height: 100px;
+        color: white;
+        font-size: 25px;
+    }
+    .accept button:hover {
+        background-color: rgb(0, 149, 223);
+        transition: 0.2s;
+    }
+    .line {
+        width: 100%;
+        height: 5px;
+        background-color: white;
+    }
+    .photo {
+        background-color: rgba(0, 0, 0, 0.448);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        padding: 0px;
+        right: 0px;
+        left: 0px;
+        top: 50px;
+        color: white;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .fold button {
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(0, 170, 255);
+        border-width: 0px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .fold button:hover {
+        background-color: rgb(0, 149, 223);
+        transition: 0.2s;
+    }
+    .new-version button {
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(0, 170, 255);
+        border-width: 0px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .new-version button:hover {
+        background-color: rgb(0, 149, 223);
+        transition: 0.2s;
+    }
+    .photo summary {
+        background-color: rgb(154, 180, 193);
+        padding: 10px;
+        display: inline-block;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    details {
+        font-size: 13px;
+    }
+</style>
+</head>
+<body>
+    <div id="ACC" class="cookies">
+<div class="accept"> <center> Wir verwenden Cookies und ähnliche Technologien auf unserer Website und verarbeiten personenbezogene Daten von dir (z.B. IP-Adresse), um z.B. Inhalte und Anzeigen zu personalisieren, Medien von Drittanbietern einzubinden oder Zugriffe auf unsere Website zu analysieren. Die Datenverarbeitung kann auch erst in Folge gesetzter Cookies stattfinden. Wir teilen diese Daten mit Dritten, die wir in den Privatsphäre-Einstellungen benennen.
+
+    Die Datenverarbeitung kann mit deiner Einwilligung oder auf Basis eines berechtigten Interesses erfolgen, dem du in den Privatsphäre-Einstellungen widersprechen kannst. Du hast das Recht, nicht einzuwilligen und deine Einwilligung zu einem späteren Zeitpunkt zu ändern oder zu widerrufen. Weitere Informationen zur Verwendung deiner Daten findest du in unserer Datenschutzerklärung.
+<br>
+<br>
+<button onclick="ACC.style.display = 'none'">Akzeptieren</button>
+</center></div>
+    </div>
+    <div class="leiste">
+        <div class="logo"></div>
+        <input type="search" placeholder="Search...">
+    </div>
+    <div class="apps">
+        <div class="block">
+            <div class="app" onclick="SPE.style.display = 'block'">
+                <img src="https://cdn140.picsart.com/411ccefb-246e-4f04-b58c-860aa42bf7ba/397039297013201.jpg?type=webp&to=min&r=240" height="100%" width="100%">
+            </div>
+            <div class="app">
+                <img src="https://th.bing.com/th/id/OIP.HNcgEq7WxsYi6qBL207scwHaHa?pid=ImgDet&rs=1" height="100%" width="100%">
+            </div>
+            <div class="app">
+                <img src="https://th.bing.com/th/id/OIP.SabUVC5717RZ-wShJVjLtwHaHa?w=199&h=202&c=7&r=0&o=5&pid=1.7" height="100%" width="100%">
+            </div>
+            <div class="app">
+                <img src="https://th.bing.com/th/id/OIP.KVO06g9G22xbNtBojvW3RAHaHa?pid=ImgDet&rs=1" height="100%" width="100%">
+            </div>
+            <div class="app">
+                <img src="https://th.bing.com/th/id/OIP.KVO06g9G22xbNtBojvW3RAHaHa?pid=ImgDet&rs=1" height="100%" width="100%">
+            </div>
+        </div>
+        <div class="photo" id="SPE" style="display: none;">
+<h1>Skyline Photo Editor</h1>
+<br>
+<div class="line"></div>
+<br>
+<h3>Version overview</h3>
+<details>
+    <summary>Ältere Versionen [Aufklappen]</summary>
+    <p class="fold">
+        V.0.0.1 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/app-debug.apk?v=1670097605316"><button>Herunterladen</button></a> 03.12.2022
+        <br>
+        V.0.0.2 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/spe-info-v.0.0.2.apk?v=1670102957732"><button>Herunterladen</button></a> 03.12.2022
+        <br>
+        V.0.0.3 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-information.v.0.0.3.apk?v=1670106249079"><button>Herunterladen</button></a> 03.12.2022
+        <br>
+        V.0.0.4 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-Info-V.0.0.4-04.12.2022.apk?v=1670152384030"><button>Herunterladen</button></a> 04.12.2022
+    </p>
+    </details>
+    <br>
+<div class="new-version">Lade die neueste Version herunter <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-Info-V.0.0.4-04.12.2022.apk?v=1670152384030"><button>Herunterladen</button></a></div>
+<br>
+<h3>SPE-View</h3>
+<details>
+    <summary>Ältere Versionen [Aufklappen]</summary>
+    <p class="fold">
+        V.0.0.1 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-VIEW%20V.0.0.1.apk?v=1670261683156"><button>Herunterladen</button></a> 05.12.2022
+        <br>
+        V.0.0.2 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-VIEW-V-0.0.2.apk?v=1670265435932"><button>Herunterladen</button></a> 05.12.2022
+        <br>
+        V.0.0.3 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-VIEW-V.0.0.3.apk?v=1670266357758"><button>Herunterladen</button></a> 05.12.2022
+    </p>
+    </details>
+    <br>
+<div class="new-version">Lade die neueste Version herunter <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-VIEW-V.0.0.3.apk?v=1670266357758"><button>Herunterladen</button></a></div>
+        </div>
+    </div>       
+</div>
+    </div>
+    
+    <div class="ad">
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/VGa1imApfdg" title="Coca-Cola® Masterpiece" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    
+</body>
+</html>
