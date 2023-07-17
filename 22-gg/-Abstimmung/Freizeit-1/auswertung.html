@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auswertung</title>
+    <style>
+         body {
+            font-family: arial;
+            font-size: 130%;
+            background-size: 100%;
+        }
+        iframe {
+            outline: none;
+            resize: none;
+            width: 50%;
+            height: 400px;
+            border-width: 0px;
+        }
+        button {
+        background-color: rgb(190, 190, 190);
+        padding: 10px;
+        border-radius: 10px;
+        border-width: 0px;
+        font-size: 130%;
+    }
+    button:hover {
+        background-color: rgb(165, 165, 165);
+        transition: 0.2s;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .exit button::before {
+        padding: 5px 10px 5px 10px;
+        transition: 1s;
+    }
+    .exit button::after {
+        padding: 10px;
+        transition: 1s;
+    }
+    .exit button {
+        background-color: rgb(190, 190, 190);
+        padding: 10px;
+        border-radius: 10px;
+        border-width: 0px;
+        font-size: 130%;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .exit button:hover {
+        background-color: rgb(220, 60, 60);
+        transition: 0.2s;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Auswertung</h1>
+        <a href="https://qp/2/22-gg/-Abstimmung/Freizeit-1/danke.html"><button>Zurück</button></a>
+        <div class="exit"><button>Leeren</button></div>
+        <br>
+        
+    <iframe src="umfrage_antworten.txt">
+        <br>
+    
+    </center>
+</body>
+</html>

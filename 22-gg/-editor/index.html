@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://th.bing.com/th/id/R.490381e7af5acd0ad48e8463ef3bfd4e?rik=cBweUHQNc3jg6Q&pid=ImgRaw&r=0" />
+
+
+
+    <title>File_Editor</title>
+
+
+    
+    <meta
+      name="description"
+      content="This is a Game downloader."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Document" />
+    <meta property="og:type" content="Document" />
+    <meta property="og:url" content="/DOCTYPE" />
+
+  
+
+
+    <style>
+      html {
+  scroll-behavior: smooth;
+}
+      body {
+        background-color: rgb(221, 221, 221);
+        font-family: arial;
+      }
+      button {
+        background-color:rgb(45, 49, 78);
+        border-radius: 10px;
+        color: white;
+      }
+      button a {
+        text-decoration: none;
+        color: white;
+      }
+      .headbod {
+        background-color: rgb(0, 110, 255);
+        height: 50px;
+      }
+      .headbod button {
+        height: 50px;
+        border-radius: 0px;
+        margin-right: -0.3%;
+        border-width: 0px;
+        background-color: rgb(0, 110, 255);
+      }
+      .headbod button:hover {
+        height: 40px;
+        border-radius: 10px;
+        margin-right: -0.3%;
+        border-width: 0px;
+        background-color: rgba(48, 138, 255, 0.522);
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      .headbod-edit {
+        background-color: rgb(0, 110, 255);
+        height: 50px;
+        margin-left: 50px;
+        width: 93.4%;
+      }
+      .headbod-edit button {
+        height: 50px;
+        border-radius: 0px;
+        margin-right: -0.3%;
+      }
+      textarea {
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 0px;
+        border-color: rgb(0, 110, 255);
+        border-width: 1px;
+        font-family: arial;
+        margin-left: 50px;
+        font-size: medium;
+        width: 93%;
+        outline: none;
+        resize: none;
+        overflow: auto;
+      }
+      textarea:hover {
+        border-width: 1px;
+        transition: 0.1s;
+      }
+      textarea:focus {
+        border-width: 1px;
+        border-radius: 0px;
+      }
+      .edit-radius button {
+        border-radius: 0px;
+        margin-bottom: 20px;
+        margin-right: -4px;
+        height: 50px;
+        background-color: rgb(0, 110, 255);
+        border-width: 0px;
+      }
+      .edit-radius button:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-right: -4px;
+        height: 40px;
+        background-color: rgba(48, 138, 255, 0.522);
+      }
+
+      summary a {
+        background-color: rgba(218, 218, 218, 0.527);
+      }
+      input {
+        border-radius: 0px;
+        border-width: 1px;
+        border-color: rgb(0, 110, 255);
+      }
+      input:hover {
+        transition: 0.1s;
+      }
+
+      input[type="file"] {
+        top: 10px;
+        left: 8px;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 0px;
+        color: white;
+      }
+      input[list="browsers"] {
+        outline: none;
+        border-width: 1px;
+      }
+      input[list="browsers"]:hover {
+        border-width: 1px;
+        transition: 0.1s;
+      }
+      input[list="browsers"]:focus {
+        border-width: 1px;
+        border-radius: 0px;
+      }
+
+
+
+    </style>
+    
+    
+  </head>
+  <body>
+  <h4>
+  
+<div class="headbod">
+  <a href="https://xeviva-gamedownloader.glitch.me/index.html"><button>Home</button></a>
+  <a href="https://xeviva-gamedownloader.glitch.me/shop.html"><button>Shop</button></a>
+  <a href="https://xeviva-gamedownloader.glitch.me/forum.html"><button>Forum</button></a>
+  <a href="https://xeviva-gamedownloader.glitch.me/txt-editor.html"><button>Updates</button></a>
+  <a href="/login.html" class="login"><button>Login</button></a>
+  <a href="https://xeviva-otext.glitch.me/purl.html"><button>Private URL</button></a>
+   
+  
+
+    
+</div>
+
+
+    
+  </h4>
+<center>
+    <br>
+    <a href=""><img weight="100" height="100" src="https://th.bing.com/th/id/R.490381e7af5acd0ad48e8463ef3bfd4e?rik=cBweUHQNc3jg6Q&pid=ImgRaw&r=0"></a>
+ <br>
+    <h2>
+    File-Editor
+  </h2>
+</center>
+
+<div class="headbod-edit" id="align">
+  <div class="edit-radius">
+      <button type="button" value="save" id="save">save</button>
+              
+      <button>
+        <input type="file" onchange="loadFile(this.files[0])">
+      </button>
+      <button>
+        <label>
+          <label for="myBrowser">Fonts:   </label>
+         <input list="browsers" id="fonts" name="myBrowser"/>
+         <datalist id="browsers">
+           <option value="https://xeviva-otext.glitch.me/arial.html">Arial</option>
+           <option value="https://xeviva-otext.glitch.me/calibri.html">Calibri</option>
+           <option value="https://xeviva-otext.glitch.me/cursive.html">Cursive</option>
+           <option value="https://xeviva-otext.glitch.me/os.html">Open Sans</option>
+           <option value="https://xeviva-otext.glitch.me/mosrr.html">Montserrat</option>
+           </datalist></labelo>
+      </button>
+       <script>
+         document.getElementById('fonts').addEventListener('change',function(){
+           alert(this.value)
+           location.href=this.value;
+         })
+       </script>
+             <a href="#font-size"><button>font-size</button></a>
+           
+    <a href="#align"><button>align text box</button></a>
+
+
+
+
+
+
+      
+
+  </div>
+</div>
+
+    <textarea rows="150" id="output">
+</textarea>
+    <script>
+      async function loadFile(file) {
+        let text = await file.text();
+        document.getElementById('output').textContent = text;
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      function saveTextAsFile() {
+  var textToWrite = document.getElementById('output').innerHTML;
+  var textFileAsBlob = new Blob([ textToWrite ], { type: 'text/plain' });
+  var fileNameToSaveAs = "file.txt"; //filename.extension
+
+  var downloadLink = document.createElement("a");
+  downloadLink.download = fileNameToSaveAs;
+  downloadLink.innerHTML = "Download File";
+  if (window.webkitURL != null) {
+    // Chrome allows the link to be clicked without actually adding it to the DOM.
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+  } else {
+    // Firefox requires the link to be added to the DOM before it can be clicked.
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+  }
+
+  downloadLink.click();
+}
+
+var button = document.getElementById('save');
+button.addEventListener('click', saveTextAsFile);
+
+function destroyClickedElement(event) {
+  // remove the link from the DOM
+  document.body.removeChild(event.target);
+}
+    </script>
+<br>
+<br>
+<br>
+
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+  
+    
+    
+    
+</body>
+    
+    
+    
+    
+    
+    
+  
+</html>

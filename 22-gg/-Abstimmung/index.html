@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstimmung</title>
+    <style>
+         body {
+            font-family: arial;
+            font-size: 130%;
+            background-size: 100%;
+            background-color: #222;
+            color: white;
+        }
+        .top button {
+            padding: 10px;
+            font-size: 40px;
+            font-weight: 600;
+            border-width: 1px;
+            border-color: transparent;
+            color: white;
+            background-color: transparent;
+        }
+        .top button:hover {
+            background-color: transparent;
+            box-shadow: 10px 0px 1px 5px;
+            transition: 0.5s;
+            border-radius: 100px;
+            background-color: #fff0;
+        }
+        .daily button{
+            width: 70%;
+            height: 100px;
+            background-color: rgb(33, 202, 248);
+            border-radius: 10px;
+            border-width: 0px;
+            color: white;
+            font-size: 200%;
+            font-weight: 600;
+            padding: 10px 0px 10px 0px;
+            cursor: pointer;
+        }
+        .daily button:hover {
+            background-color: rgb(8, 173, 219);
+            transition: 0.2s;
+            box-shadow: 0px 0px 1px 5px;
+        }
+       .wandertag button{
+            width: 70%;
+            height: 100px;
+            background-color: #4444;
+            border-radius: 10px;
+            border-width: 0px;
+            color: white;
+            font-size: 200%;
+            font-weight: 600;
+            padding: 10px 0px 10px 0px;
+            cursor: pointer;
+            margin-top: 20px;
+       }
+       .wandertag button:hover {
+        transition: 0.2s;
+        background-color: #4442;
+        box-shadow: 0px 0px 1px 5px;
+       }
+       .shop button {
+        width: 70%;
+            height: 100px;
+            background-color: #9ee9;
+            border-radius: 10px;
+            border-width: 0px;
+            color: white;
+            font-size: 200%;
+            font-weight: 600;
+            padding: 10px 0px 10px 0px;
+            cursor: pointer;
+            margin-top: 20px;
+       }
+       .shop button:hover {
+        transition: 0.2s;
+        background-color: #9ee7;
+        box-shadow: 0px 0px 1px 5px;
+       }
+       .statics-bar {
+        background-color: #777;
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+       }
+       .statics-bar button {
+        background-color: #444;
+        border-width: 0px;
+        border-radius: 5px;
+        height: 30px;
+        color: white;
+       }
+       #money {
+        float: right;
+       }
+    </style>
+</head>
+<body>
+    <center>
+       <div class="top">
+        <button>
+            Abstimmung
+        </button>
+       </div>
+       <div class="statics-bar">
+        <button id="money">0 Münzen</button>
+       </div>
+        <br>
+        <br>
+       <form action="">
+        <div class="daily" ><button type="submit"> Tägliche Abstimmung </button></div>
+       </form>
+       <form action="Freizeit-1">
+        <div class="wandertag"><button type="submit"> Wandertag </button></div>
+       </form>
+       <form action="">
+        <div class="shop"><button type="submit">Shop</button></div>
+       </form>
+    </center>
+</body>
+</html>
