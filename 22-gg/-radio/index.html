@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+<style>
+    body {
+        font-family: arial;
+        background-color: #444;
+    }
+    .radio{
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        right: auto;
+        bottom: auto;
+        height: 250px;
+        width: 250px;
+        background-image: url("/2/22-gg/-radio/RebelRockFM.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-width: 2px;
+        border-color: black;
+        border-radius: 10px;
+    }
+    .play button{
+        background-image: url("Play.png");
+        background-size:cover;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 50px;
+        padding: 50px;
+        border-radius: 10%;
+        margin-top: 75%;
+        border-width: 0px;
+        background-color: #5bdeff;
+    }
+    .play button:hover {
+        box-shadow: 0px 0px 2px 2px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .radioplayer {
+        display: none;
+        position: fixed;
+        bottom: 0px;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: 100%;
+        height: 10%;
+        background-color: white;
+        margin-left: -9px;
+    }
+    .mp3-player {
+    max-width: 300px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 25px;
+    padding: 0px 0px 10px 0px;
+}
+
+audio {
+    width: 100%;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: white;
+    color: #fff;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #fff1;
+    color: white;
+    border-radius: 100%;
+   
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: white;
+}
+</style>
+</head>
+<body>
+    <div class="radio">
+<div class="play">
+    <center>
+        
+            <button onclick="INFO.style.display = 'block'">
+        </button>
+       
+    </center>
+</div>
+    </div>
+    <div class="radioplayer" id="INFO">
+        <img src="RebelRockFM.png" height="100%">
+        
+            <audio id="audio-player" controls class="mp3-player">
+                <source src="https://cdn.glitch.me/c2b0623d-49cd-4896-b419-21aa5351ecd8/Playlist1.mp3?v=1690467900871" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        
+        
+    </div>
+</body>
+</html>
