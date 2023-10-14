@@ -3,55 +3,55 @@
 <br>
 <h2>Available Commands:</h2>
       
-      •"-Abstimmung"
+      -Abstimmung
 <p></p>
       
-      •"-admin"
+      -admin
       
 <p></p>
       
-      •"-camera"
+      -camera
 
 <p></p>
         
-        •"-cloud"
+        -cloud
 
 <p></p>
        
-        •"-editor"
+        -editor
 
 <p></p>
        
-        •"-fastboot"
+        -fastboot
 
 <p></p>
        
-        •"-filemanager"
+        -filemanager
 
 <p></p>
       
-        •"-help"
+        -help
 
 <p></p>
      
-        •"-launcher"
+        -launcher
 
 <p></p>
        
-        •"-mbview"
+        -mbview
 
 <p></p>
       
-        •"-mobile"
+        -mobile
 
 <p></p>
        
-        •"-papp"
+        -papp
 
 <p></p>
       
-        •"-playstore"
+        -playstore
 <p></p>
 
-        •"-radio"
+        -radio
       
