@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launcher</title>
+    <style>
+        html {
+            flex: auto;
+        }
+        body {
+            justify-content: center;
+            align-items: center;
+
+            font-family: arial;
+            background-color: #444;
+        }
+        .headline {
+            font-size: 25px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .news {
+            text-align: right;
+            float: right;
+            height: 500px;
+            width: 50%;
+            background-color: black;
+            position: static;
+        }
+        #discord  {
+            border-width: 0px;
+            border-radius: 100px;
+            padding: 0px;
+            background-color: #4444;
+            color: white;
+            margin-top: 50px;
+        }
+        #discord:hover {
+            box-shadow: 0 0 15px #5865F2;
+            background-color: #5865F2;
+        }
+        #steam {
+            border-width: 0px;
+            border-radius: 100px;
+            padding: 0px;
+            background-color: #4444;
+            color: white;
+            margin-top: 50px;
+        }
+        #steam:hover {
+            box-shadow: 0 0 15px #000000;
+            background-color: #000000;
+        }
+        .close {
+            width: 100px; height: 40px; background-color: rgb(255, 38, 38); color: white; border-width: 0px; cursor: pointer;
+        }
+        .close:hover {
+            box-shadow: 0 0 15px rgb(255, 38, 38);
+        }
+        .launcher-inhalt {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="headline">
+        <center>Web-Launcher</center>
+    </div>
+    <div class="launcher-inhalt">
+        <div class="options">
+            <img onclick="APPS.style.display='block'" height="100px" width="100px" src="https://th.bing.com/th/id/R.a18e9c3dbde508e6a570cfb3d3e878b0?rik=h4nNyPADrdG1bA&riu=http%3a%2f%2fremanthinh.com%2fpublic%2fhome%2fimage%2flist.png&ehk=74uRKAQankuY4Kg82nFJXOYtbMGVULd1HK4nl7z6R24%3d&risl=&pid=ImgRaw&r=0" style="float: left; cursor: pointer;">
+            <div id="APPS" style="display: none;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="close" onclick="APPS.style.display = 'none'">x</button>
+                <br>
+                <button id="discord"><a href="discord:"><img height="100px" width="100px" src="https://i.redd.it/5zec9qw4ppy61.png"></a></button>
+                <br>
+                <a id="steam" href="steam:"><img height="100px" width="100px" src="https://th.bing.com/th/id/R.0075049078ee87b0733869c3aba7d10c?rik=2saEGPuUrQNDNA&riu=http%3a%2f%2ffc09.deviantart.net%2ffs71%2ff%2f2014%2f242%2f7%2f8%2fnew_steam_icon_vector_by_danspy1994-d7ujcvz.png&ehk=Cg%2bgexav4w%2folwL7SMsbH3aCgmQmEG4bP4X1N1wUMoE%3d&risl=&pid=ImgRaw&r=0"></a>
+            </div>
+        
+        </div>
+        <div class="news" >
+            <center><h1 style="font-size: 15px; color: white; text-decoration: underline;">News</h1></center>
+            <br>
+        </div>
+        
+    </div>
+    
+
+</body>
+</html>

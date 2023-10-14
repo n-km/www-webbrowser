@@ -3,42 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.xivewnAyZK22SIIerRUWvQHaHZ?pid=ImgDet&rs=1">
-    <title>Play Store</title>
+    <link rel="icon" type="image/x-icon" href="Bilder/GET STORE.png">
+    <title>GS - GET STORE</title>
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     body {
-        background-color: rgb(181, 181, 181);
+        background-color: rgb(211, 211, 211);
         height: 50cm;
+        font-family: arial;
+    }
+    h1 {
+        font-family: arial;
+        text-decoration: underline;
     }
     .leiste {
-        background-color: black;
-        height: 53px;
+        background-color: rgb(255, 255, 255);
+        height: 55px;
         width: 100%;
         position: fixed;
         top: 0px;
         bottom: auto;
         left: 0px;
         right: auto;
+        box-shadow: 0 0 10px;
     }
     .logo{
-        background-image: url("https://th.bing.com/th/id/OIP.xivewnAyZK22SIIerRUWvQHaHZ?pid=ImgDet&rs=1");
+        background-image: url("Bilder/GET\ STORE.png");
         background-size: 100%;
         background-repeat: no-repeat;
         border-width: 2px;
-        border-style: dotted;
         border-color: rgb(255, 255, 255);
         height: 50px;
         width: 50px;
         position: fixed;
-        left: 0px;
+        left: 2px;
         right: auto;
         bottom: auto;
-        top: 0px;
+        top: 2px;
         border-radius: 10px;
+        box-shadow: 0 0 10px #ffffff;
     }
     input[type="search"] {
-        background-color: black;
-        color: white;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         border-radius: 10px;
         position: fixed;
         bottom: auto;
@@ -49,13 +58,15 @@
         border-width: 0px;
         height: 50px;
         margin-left: 10px;
-        border-width: 2px;
+        border-width: 0 0 2px white;
         border-color: white;
-        border-style: dotted;
         }
     .apps {
         margin-top: 60px;
         display: table;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
     }
     .app {
         height: 10ch;
@@ -64,6 +75,8 @@
         background-size: 100%;
         border-radius: 10px;
         padding: 10px;
+        transition: 0.2s;
+        cursor: pointer;
     }
     .app img {
         border-radius: 10px;
@@ -82,17 +95,32 @@
         top: auto;
         padding: 10px;
         background-color: white;
-        
+        transition: 0.2s;
+    }
+    .ad button {
+        height: 50px;
+        position: fixed;
+        width: 50px;
+        background-color: rgba(0, 0, 0, 0.487);
+        border-width: 0px;
+        color: white;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    .ad button:hover {
+        background-color: red;
     }
     .cookies {
         background-color: rgba(0, 0, 0, 0.448);
-        height: 100%;
-        width: 100%;
+        height: 60%;
+        width: 50%;
         position: fixed;
-        padding: 0px;
+        padding: 10px;
         right: 0px;
-        left: 0px;
-        top: 50px;
+        left: 25%;
+        top: 25%;
+        border-radius: 10px;
+        transition: 0.2s;
     }
     .cookies center {
         width: 80%;
@@ -102,18 +130,25 @@
         color: white;
         font-family: arial;
         font-size: 20px;
+        left: 26%;
+        right:13%;
+        position: fixed;
     }
-    .accept button {
+    .accept-btn {
         padding: 10px;
-        background-color: rgb(0, 170, 255);
+        background-color: rgb(221, 221, 221);
         border-width: 0px;
-        width: 40%;
+        width:max-content;
+        border-radius: 10px;
         height: 100px;
-        color: white;
+        color: rgb(35, 35, 35);
         font-size: 25px;
+        transition: 0.4s;
+        cursor:pointer;
     }
-    .accept button:hover {
-        background-color: rgb(0, 149, 223);
+    .accept-btn:hover {
+        background-color: rgb(0, 170, 255);
+        color: white;
         transition: 0.2s;
     }
     .line {
@@ -123,13 +158,14 @@
     }
     .photo {
         background-color: rgba(0, 0, 0, 0.448);
-        height: 100%;
-        width: 100%;
+        height: 50%;
+        width: 50%;
         position: fixed;
-        padding: 0px;
+        padding: 10px;
         right: 0px;
-        left: 0px;
-        top: 50px;
+        left: 25%;
+        top: 25%;
+        border-radius: 10px;
         color: white;
         font-size: 25px;
         font-family: Arial, Helvetica, sans-serif;
@@ -172,23 +208,159 @@
     details {
         font-size: 13px;
     }
+    .close-skyline {
+        background-color: rgba(0, 0, 0, 0.374);
+        border-radius: 10px;
+        border-width: 0px;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .close-skyline:hover {
+        background-color: red;
+    }
+    .spe-v-png-goto {
+        transition: 0.2s;
+        float: right;
+        margin-right: 30%;
+    }
+    .spe-v-png-goto:hover {
+        box-shadow: 0 0 10px black;
+        height: 170px;
+    }
+    .newsletter {
+        padding: 10px;
+        border-radius: 10px;
+        border-width: 0px;
+        background-color: white;
+        height: 50px;
+        transition: 0.2s;
+    }
+    .newsletter:hover {
+        background-color: rgb(255, 67, 67);
+        color: white;
+    }
+    p {
+        color: white;
+        font-family: arial;
+        background-color: #4444;
+        border-radius: 10px;
+        padding: 10px;
+}
+.dummygames {
+    float: right; height: 50px; margin-top: 2px; border-radius: 10px; border-width: 1px; margin-right: 2px; background-color: white; 
+    transition: 0.2s;
+}
+.dummygames:hover {
+    background-color: rgb(39, 179, 249);
+    color: white;
+}
+.dummygamescontain {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height:100%;
+    background-color: rgb(218, 218, 218);
+    top: 55px;
+}
+.dummygamescontain button {
+    padding: 10px;
+    border-width: 1px;
+    border-radius: 7px;
+    background-color: white;
+}
+.anfang {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.anfang img {
+    height: 75px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.close-png-btn {
+    transition: 0.2s;
+    position: fixed; right: 0px; top: 55px; border-radius: 10px; border-width: 0px; background-color: rgb(255, 3, 3); height: 50px; color: white; width: 50px;
+}
+.close-png-btn:hover {
+    background-color: rgb(208, 0, 0);
+}
+
 </style>
 </head>
 <body>
     <div id="ACC" class="cookies">
-<div class="accept"> <center> Wir verwenden Cookies und ähnliche Technologien auf unserer Website und verarbeiten personenbezogene Daten von dir (z.B. IP-Adresse), um z.B. Inhalte und Anzeigen zu personalisieren, Medien von Drittanbietern einzubinden oder Zugriffe auf unsere Website zu analysieren. Die Datenverarbeitung kann auch erst in Folge gesetzter Cookies stattfinden. Wir teilen diese Daten mit Dritten, die wir in den Privatsphäre-Einstellungen benennen.
+<div class="accept"> <center>
+    <h6> Wir verwenden Cookies und ähnliche Technologien auf unserer Website und verarbeiten personenbezogene Daten von dir (z.B. IP-Adresse), um z.B. Inhalte und Anzeigen zu personalisieren, Medien von Drittanbietern einzubinden oder Zugriffe auf unsere Website zu analysieren. Die Datenverarbeitung kann auch erst in Folge gesetzter Cookies stattfinden. Wir teilen diese Daten mit Dritten, die wir in den Privatsphäre-Einstellungen benennen.
 
-    Die Datenverarbeitung kann mit deiner Einwilligung oder auf Basis eines berechtigten Interesses erfolgen, dem du in den Privatsphäre-Einstellungen widersprechen kannst. Du hast das Recht, nicht einzuwilligen und deine Einwilligung zu einem späteren Zeitpunkt zu ändern oder zu widerrufen. Weitere Informationen zur Verwendung deiner Daten findest du in unserer Datenschutzerklärung.
+        Die Datenverarbeitung kann mit deiner Einwilligung oder auf Basis eines berechtigten Interesses erfolgen, dem du in den Privatsphäre-Einstellungen widersprechen kannst. Du hast das Recht, nicht einzuwilligen und deine Einwilligung zu einem späteren Zeitpunkt zu ändern oder zu widerrufen. Weitere Informationen zur Verwendung deiner Daten findest du in unserer Datenschutzerklärung.</h6>
 <br>
 <br>
-<button onclick="ACC.style.display = 'none'">Akzeptieren</button>
+<button onclick="ACC.style.transform = 'translate(-150%, 0px)'" class="accept-btn">Akzeptieren</button>
+<br>
+<br>
+
+<button class="newsletter"> 
+    Subscribe Newsletter
+</button>
 </center></div>
     </div>
     <div class="leiste">
         <div class="logo"></div>
+       <form>
         <input type="search" placeholder="Search...">
+       
+           
+       </form>
+       
+       <form action="mailto:de.nilskoltermann@gmail.com">
+        <button style="float: right; border-width: 1px; margin-top: 2px;" class="newsletter">Subscribe Newsletter</button>
+       </form>
+       <button class="dummygames" onclick="DGL.style.display='block'">
+        Dummy Games
+       </button>
+       <div class="dummygamescontain" id="DGL">
+        <button style="float: right;" onclick="DGL.style.display='none'">Schließen</button>
+        <h1>Dummy Games</h1>
+        <div class="scrollview" style="overflow:scroll; height:100%;">
+        <p>A</p>
+        <button>Age of Empires (onclick)</button>
+        <p>B</p>
+        <p>C</p>
+        <p>D</p>
+        <p>E</p>
+        <p>F</p>
+        <p>G</p>
+        <p>H</p>
+        <p>I</p>
+        <p>J</p>
+        <p>K</p>
+        <p>L</p>
+        <p>M</p>
+        <p>N</p>
+        <p>O</p>
+        <p>P</p>
+        <p>Q</p>
+        <p>R</p>
+        <p>S</p>
+        <button>Spotify (onclick)</button>
+        <form action="Apps/SG.apk"><button>Stamble Guys (onclick)</button></form>
+        <p>T</p>
+        <p>U</p>
+        <p>V</p>
+        <p>W</p>
+        <p>X</p>
+        <p>Y</p>
+        <p>Z</p>
     </div>
+       </div>
+        
+    </div>
+    <div id="anfang"></div>
+    <div class="anfang"><form action=""><a href="#anfang"><img src="Bilder/UP.png"></a></form></div>
     <div class="apps">
+        <p>Angesagt & Nennenswert</p>
         <div class="block">
             <div class="app" onclick="SPE.style.display = 'block'">
                 <img src="https://cdn140.picsart.com/411ccefb-246e-4f04-b58c-860aa42bf7ba/397039297013201.jpg?type=webp&to=min&r=240" height="100%" width="100%">
@@ -209,9 +381,11 @@
         <div class="photo" id="SPE" style="display: none;">
 <h1>Skyline Photo Editor</h1>
 <br>
-<div class="line"></div>
+<div class="scrollview" style="overflow:scroll; height:310px;">
+    <div class="line"></div>
 <br>
 <h3>Version overview</h3>
+<button onclick="SPE.style.display='none'" style="float: right; position:fixed; left: 70%; bottom: 70%; padding: 10px;" class="close-skyline">X</button>
 <details>
     <summary>Ältere Versionen [Aufklappen]</summary>
     <p class="fold">
@@ -222,6 +396,21 @@
         V.0.0.3 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-information.v.0.0.3.apk?v=1670106249079"><button>Herunterladen</button></a> 03.12.2022
         <br>
         V.0.0.4 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-Info-V.0.0.4-04.12.2022.apk?v=1670152384030"><button>Herunterladen</button></a> 04.12.2022
+    </p>
+    </details>
+    <details>
+        <summary>Details</summary>
+    <p class="fold">
+        <img src="Bilder/spe-versions-details.jpg" height="150px" style="border-radius: 10px; cursor: pointer;" onclick="SPEVPNG.style.display='block'" class="spe-v-png-goto">
+        <p>Voraussetzungen: /</p>
+        <p>Für dieses Programm ist keine Mindesthardwarevorraussetzung angesehen, <br>da dieses Programm auf fast jedes Android-Smartphone läuft.</p>
+        <br>
+        <p>Betriebssystem: Android</p>
+        <p>Version: v.0.0.1 - v.0.0.4</p>
+        <div id="SPEVPNG" style="display: none; position: fixed; top: 0px; left: 0px; height: 100%;" >
+            <img src="Bilder/spe-versions-details.jpg" height="100%">
+            <button class="close-png-btn"  onclick="SPEVPNG.style.display='none'">X</button>
+        </div>
     </p>
     </details>
     <br>
@@ -238,16 +427,32 @@
         V.0.0.3 Testversion <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-VIEW-V.0.0.3.apk?v=1670266357758"><button>Herunterladen</button></a> 05.12.2022
     </p>
     </details>
+    <details>
+        <summary>Details</summary>
+    <p class="fold">
+        <img src="Bilder/spe-view-details.jpg" height="150px" style="border-radius: 10px; cursor: pointer;" onclick="SPEVIEWPNG.style.display='block'" class="spe-v-png-goto">
+        <p>Voraussetzungen: /</p>
+        <p>Für dieses Programm ist keine Mindesthardwarevorraussetzung angesehen, <br>da dieses Programm auf fast jedes Android-Smartphone läuft.</p>
+        <br>
+        <p>Betriebssystem: Android</p>
+        <p>Version: v.0.0.1 - v.0.0.4</p>
+        <div id="SPEVIEWPNG" style="display: none; position: fixed; top: 0px; left: 0px; height: 100%;" >
+            <img src="Bilder/spe-view-details.jpg" height="100%">
+            <button class="close-png-btn" onclick="SPEVIEWPNG.style.display='none'">X</button>
+        </div>
+    </p>
+    </details>
     <br>
 <div class="new-version">Lade die neueste Version herunter <a href="https://cdn.glitch.global/bba08c67-8433-4fe9-bbbe-bf51305e6a24/SPE-VIEW-V.0.0.3.apk?v=1670266357758"><button>Herunterladen</button></a></div>
+</div>
         </div>
     </div>       
 </div>
     </div>
     
-    <div class="ad">
+    <div class="ad" id="AD">
+        <button onclick="AD.style.transform = 'translate(100%, 0px)'">x</button>
         <iframe width="auto" height="auto" src="https://www.youtube.com/embed/VGa1imApfdg" title="Coca-Cola® Masterpiece" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     
 </body>
-</html>

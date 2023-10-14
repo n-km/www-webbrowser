@@ -89,27 +89,16 @@
             height: 35px;
             background-color: white;
             border-width: 0px;
+            transition: 0.2s;
         }
         .bg button:hover {
-            background-color: rgb(185, 185, 185);
-            transition: 0.2s;
             cursor: pointer;
-            box-shadow: 3px 0px 3px 0px;
+            box-shadow: 0 5px 5px black;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: white;
         }
        
-        .banner {
-            position: fixed;
-            float: left;
-            top: 0px;
-            bottom: auto;
-            right: auto;
-            left: 0px;
-            background-color: white;
-            padding: 10px;
-            border-radius: 10px;
-            width: 100%;
-            height: 3%;
-        }
+        
         .help {
             position: fixed;
             left: 40%;
@@ -132,19 +121,17 @@
             width: 10ch;
             cursor: pointer;
             border-radius: 100%;
+            transition: 0.2s;
         }
         .settings img:hover {
             transform: rotate(90deg);
-            transition: 0.2s;
             box-shadow: 0px 0px 1px 1px black inset;
         }
         .settings img:active {
             box-shadow: 0px 0px 2px 2px black inset;
-            transition: 0.2s;
         }
         .settings img::after {
             transform: rotate(180deg);
-            transition: 0.2s;
         }
         .options {
             display: none;
@@ -162,19 +149,19 @@
             height: 10%;
             background-color: white;
             border-radius: 0px;
-            border-width: 1px;
+            border-width: 0px;
             cursor: pointer;
+            transition: 0.2s;
         }
         .options button:hover {
             background-color: rgba(0, 0, 0, 0.303);
-            transition: 0.2s;
         }
     </style>
 
 </head>
 
 <body>
-<div class="banner"><center>Du bist auf dem Handy? <a href="-mbview/">Geh hier rauf!</a></center></div>
+
     <div class="settings" onclick="OPTIONS.style.display = 'block'"><img src="https://cdn2.iconfinder.com/data/icons/basic-ui-elements-circle/512/Bullet_list_menu_options-512.png"></div>
     <div class="options" id="OPTIONS">  
         <button onclick="OPTIONS.style.display = 'none'">Schließen</button>
@@ -238,15 +225,9 @@
   <p class="help">Tippe "-help" für Hilfeleistung.</p>
 <br><br>
        <div class="bg">
-        <button class="grass" type="button" onclick="body.style.backgroundImage = 'url(https://img3.wallspic.com/attachments/originals/0/4/4/3/0/103440-grazing-vegetation-grassland-tree-wall-4096x2160.jpg)' ">Grass-mode</button>
+        <button class="dark" type="button" onclick="body.style.background = 'rgba(67, 67, 67)' ">Dark-Grey</button>
         <br>
-        <button class="mountain" type="button" onclick="body.style.backgroundImage = 'url(https://wallpaperaccess.com/full/38581.jpg)' ">Mountain-mode</button>
-        <br>
-        <button class="dark" type="button" onclick="body.style.backgroundImage = 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAACVBMVEUwMDAsLCwxMTGsbUDcAAABb0lEQVR4nO3QQQ0AIBDAMA7/orHAXoSkVbBszeKaWcHs1wUfMSswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzArMCswKzDr3gFT/QH17Foa0wAAAABJRU5ErkJggg==)' ">Dark-Mode</button>
-        <br>
-        <button type="button" onclick="body.style.backgroundImage = 'url(https://free4kwallpapers.com/uploads/originals/2019/08/04/stone-wallpaper.jpg)'">Stone</button>
-        <br>
-        <button type="button" onclick="body.style.background = 'rgb(69, 224, 255)'">Normal</button>
+        <button type="button" onclick="body.style.background = 'rgb(69, 224, 255)'">Blue</button>
         </div>
 
 </body>
