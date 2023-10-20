@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>HELP</title>
+  <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="refresh" content="8; URL=https://bing.de" />
+  <style>
+    body {
+        background-color: #444;
+    }
+    p {
+        font-size: 50px;
+        color: white;
+        font-family: arial;
+    }
+  </style>
+</head>
+<body>
+<center>
+    <img src="https://cdn.dribbble.com/users/410304/screenshots/2049051/preloader3.gif" height="30%" style="border-radius: 10px;">  
+<p>Sie werden gerade weitergeleitet</p><p id="countdown">8</p>
+</center>
+
+</body>
+<script>
+    // Funktion, um den Countdown durchzuführen
+    function startCountdown() {
+      let count = 8;
+      const countdownElement = document.getElementById("countdown");
+  
+      function updateCountdown() {
+        countdownElement.textContent = count;
+        count--;
+  
+        if (count < 0) {
+          clearInterval(interval); // Countdown stoppen, wenn 0 erreicht ist
+        }
+      }
+  
+      updateCountdown(); // Erste Aktualisierung sofort ausführen
+      const interval = setInterval(updateCountdown, 1000); // Alle 1000 Millisekunden (1 Sekunde) aktualisieren
+    }
+  
+    // Starten Sie den Countdown, wenn die Seite geladen wird
+    window.onload = startCountdown;
+  </script>
+</html>

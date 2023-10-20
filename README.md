@@ -14,6 +14,10 @@ It's like a Filesearch. You can write commands in the input-field and so you can
       -admin
       
 <p></p>
+
+        -bing
+
+<p></p>
       
       -camera
 
