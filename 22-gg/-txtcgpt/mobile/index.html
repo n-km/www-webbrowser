@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .toolbar {
+      background-color: #0078D4;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.2);
+      margin-top: 10px;
+    }
+    .toolbar button {
+        border-radius: 10px;
+        border-width: 0px;
+        color: white;
+        background-color: transparent;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    .toolbar button:hover {
+        background-color: rgba(255, 255, 255, 0.186);
+    }
+    textarea {
+      width: 100%;
+      height: 300px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      outline: none;
+      resize: none;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .italic {
+      font-style: italic;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+    .large-font {
+      font-size: 20px;
+    }
+    .small-font {
+      font-size: 12px;
+    }
+    .font-family {
+      font-family: Arial;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <img id="saveButton" onclick="saveText()" src="https://cdn.icon-icons.com/icons2/841/PNG/512/flat-style-circle-save_icon-icons.com_66942.png" height="50px">
+    <button id="helpButton" onclick="insertHTMLTemplate()">Grundgerüst erstellen</button>
+    <input type="file" id="fileInput" accept=".html" style="display: none;">
+    <button id="importButton" onclick="importText()">.html-Datei importieren</button>
+  </div>
+
+  <textarea id="editor"></textarea>
+
+  <br>
+
+  <script>
+     function getSelectionText() {
+      const editor = document.getElementById('editor');
+      return editor.value.substring(editor.selectionStart, editor.selectionEnd);
+    }
+
+    function replaceSelectionWithText(replacement, cssClass) {
+      const editor = document.getElementById('editor');
+      const start = editor.selectionStart;
+      const end = editor.selectionEnd;
+
+      const beforeText = editor.value.substring(0, start);
+      const selectedText = editor.value.substring(start, end);
+      const afterText = editor.value.substring(end);
+
+      const formattedText = `<span class="${cssClass}">${selectedText}</span>`;
+      const newText = beforeText + formattedText + afterText;
+
+      editor.value = newText;
+      editor.setSelectionRange(start, start + formattedText.length);
+      editor.focus();
+    }
+
+    function formatText(command) {
+      const selectedText = getSelectionText();
+      if (selectedText) {
+        const cssClass = command;
+        replaceSelectionWithText(selectedText, cssClass);
+      }
+    }
+
+    function increaseFontSize() {
+      const selectedText = getSelectionText();
+      if (selectedText) {
+        const cssClass = 'large-font';
+        replaceSelectionWithText(selectedText, cssClass);
+      }
+    }
+
+    function decreaseFontSize() {
+      const selectedText = getSelectionText();
+      if (selectedText) {
+        const cssClass = 'small-font';
+        replaceSelectionWithText(selectedText, cssClass);
+      }
+    }
+
+    function changeFont() {
+      const selectedFont = document.getElementById('fontSelect').value;
+      const selectedText = getSelectionText();
+      if (selectedText) {
+        const cssClass = 'font-family';
+        replaceSelectionWithText(selectedText, cssClass);
+      }
+    }
+
+    function insertLink() {
+      const linkURL = prompt('Geben Sie die URL des Links ein:');
+      if (linkURL) {
+        const selectedText = getSelectionText();
+        const linkText = selectedText || linkURL;
+        const linkHTML = `<a href="${linkURL}" target="_blank">${linkText}</a>`;
+        replaceSelectionWithText(linkHTML, '');
+      }
+    }
+
+    function insertImage() {
+      const imageURL = prompt('Geben Sie die URL des Bilds ein:');
+      if (imageURL) {
+        const imageHTML = `<img src="${imageURL}" alt="Bild">`;
+        replaceSelectionWithText(imageHTML, '');
+      }
+    }
+
+    function saveText() {
+      const text = document.getElementById('editor').value;
+      const blob = new Blob([text], { type: 'text/html' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'htmlfile.html';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    function importText() {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function (e) {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const text = e.target.result;
+          document.getElementById('editor').value = text;
+        };
+        reader.readAsText(file);
+      };
+      fileInput.click();
+    }
+
+    
+    
+    function insertHTMLTemplate() {
+    const template = `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>//Push your title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+    `;
+
+    const editor = document.getElementById('editor');
+    const start = editor.selectionStart;
+    const end = editor.selectionEnd;
+    const beforeText = editor.value.substring(0, start);
+    const afterText = editor.value.substring(end);
+
+    editor.value = beforeText + template + afterText;
+  }
+  </script>
+</body>
+</html>
