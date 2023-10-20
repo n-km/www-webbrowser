@@ -22,6 +22,10 @@ It's like a Filesearch. You can write commands in the input-field and so you can
       -camera
 
 <p></p>
+
+        -txtcgpt
+
+<p></p>
         
         -cloud
 
