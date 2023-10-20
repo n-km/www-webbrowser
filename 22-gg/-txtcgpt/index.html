@@ -22,17 +22,15 @@
       margin-top: 10px;
     }
     .toolbar button {
-      background-color: #005A9E;
-      color: #fff;
-      border: none;
-      padding: 8px 12px;
-      margin-right: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      border-radius: 5px;
+        border-radius: 10px;
+        border-width: 0px;
+        color: white;
+        background-color: transparent;
+        transition: 0.2s;
+        cursor: pointer;
     }
     .toolbar button:hover {
-      background-color: #0078D4;
+        background-color: rgba(255, 255, 255, 0.186);
     }
     textarea {
       width: 80%;
@@ -43,6 +41,8 @@
       padding: 10px;
       border-radius: 0 0 10px 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      outline: none;
+      resize: none;
     }
     .bold {
       font-weight: bold;
@@ -180,22 +180,8 @@
       fileInput.click();
     }
 
-    const saveButton = document.getElementById('saveButton');
-    const importButton = document.getElementById('importButton');
     
-    saveButton.addEventListener('mouseover', function() {
-      saveButton.style.backgroundColor = '#005A9E';
-    });
-    saveButton.addEventListener('mouseout', function() {
-      saveButton.style.backgroundColor = '#0078D4';
-    });
     
-    importButton.addEventListener('mouseover', function() {
-      importButton.style.backgroundColor = '#005A9E';
-    });
-    importButton.addEventListener('mouseout', function() {
-      importButton.style.backgroundColor = '#0078D4';
-    });
     function insertHTMLTemplate() {
     const template = `
     <!DOCTYPE html>
