@@ -75,3 +75,5 @@ It's like a Filesearch. You can write commands in the input-field and so you can
 <h2>Backup Downloads:</h2>
 <h3>Version 1.0:</h3>
 <a href="https://raw.githubusercontent.com/n-km/www-webbrowser/main/.backups/v.1.0.zip">Download</a>
+<h3>Version 1.1:</h3>
+<a href="https://raw.githubusercontent.com/n-km/www-webbrowser/main/.backups/v.1.1.zip">Download</a>
