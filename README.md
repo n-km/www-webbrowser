@@ -26,6 +26,10 @@ It's like a Filesearch. You can write commands in the input-field and so you can
         -txtcgpt
 
 <p></p>
+
+        -txtcgpt/mobile
+
+<p></p>
         
         -cloud
 
