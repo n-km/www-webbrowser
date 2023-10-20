@@ -34,6 +34,10 @@ It's like a Filesearch. You can write commands in the input-field and so you can
         -filemanager
 
 <p></p>
+
+        -google
+
+<p></p>
       
         -help
 
