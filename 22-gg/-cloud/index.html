@@ -7,6 +7,8 @@
     <style>
         body {
             font-family: arial;
+            background-color: black;
+
         }
         .task {
             position: fixed;
@@ -29,13 +31,58 @@
         .task button:hover {
             text-decoration: underline;
         }
+        .content {
+            float: right;
+            display: none;
+        }
+        .close {
+            padding: 5px;
+            background-color: rgba(128, 128, 128, 0.544);
+            color: white;
+            border-radius: 1px;
+            border-color: transparent;
+            border-style: double;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .close:hover {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
     <div class="task">
-        <button>ISO's</button>
-        <button>Links</button>
-        <button>Files</button>
+        <button onclick="ISO.style.display='block'">ISO's</button>
+        <button onclick="LINK.style.display='block'">Links</button>
+        <button onclick="FILE.style.display='block'">Files</button>
+    </div>
+    <div class="content" id="ISO">
+        <button class="close" onclick="ISO.style.display='none'">Close Tab(ISOS)</button>
+        <br>
+        <a href="">https://</a>
+        
+    </div>
+    <div class="content" id="LINK">
+        <button class="close" onclick="LINK.style.display='none'">Close Tab(LINKS)</button>
+        <br>
+        <a href="https://ubuntu.com/download/desktop">Ubuntu Desktop(https://ubuntu.com/download/desktop)</a>
+        
+    </div>
+    <div class="content" id="FILE">
+        <button class="close" onclick="FILE.style.display='none'">Close Tab(FILES)</button>
+        <br>
+        <a href="">https://</a>
+        <br>
+        <a href="">https://</a>
+        <br>
+        <a href="">https://</a>
+        <br>
+        <a href="">https://</a>
+        <br>
+        <a href="">https://</a>
+
+        
     </div>
 </body>
 </html>
