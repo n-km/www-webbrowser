@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud</title>
     <style>
+        html { 
+  background: url("https://wallup.net/wp-content/uploads/2016/01/200484-animals-nature-eagle-bald_eagle.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
         body {
             font-family: arial;
-            background-color: black;
-
         }
         .task {
             position: fixed;
@@ -17,7 +22,7 @@
             top: 0px;
             height: 100%;
             width: 200px;
-            background-color: rgb(40, 229, 40);
+            background-color: rgba(255, 255, 255, 0.303);
         }
         .task button {
             width: 100%;
@@ -31,13 +36,53 @@
         .task button:hover {
             text-decoration: underline;
         }
+        .fixedtask {
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            float: right;
+        }
+        .fixedtask img {
+            height: 50px;
+            width: 50px;
+            padding: 5px;
+            border-radius: 3px;
+            transition: 0.1s;
+        }
+        .fixedtask img:hover {
+            background-color: rgba(255, 255, 255, 0.712);
+        }
+        .close-everything {
+            position: fixed;
+            right: 5px;
+            bottom: 100px;
+        }
+        .close-everything button {
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 3px;
+            border-width: 0px;
+            border-style: double;
+            transition: 0.1s;
+        }
+        .close-everything button:hover {
+            background-color: rgba(0, 0, 0, 0.25);
+        }
         .content {
             float: right;
             display: none;
+            background-color: rgba(255, 255, 255, 0.575);
+            padding: 5px;
+            border-radius: 5px;
+            width: 1000px;
+            margin-top: 3px;
         }
         .close {
             padding: 5px;
-            background-color: rgba(128, 128, 128, 0.544);
+            background-color: rgba(68, 68, 68, 0.544);
             color: white;
             border-radius: 1px;
             border-color: transparent;
@@ -45,9 +90,22 @@
             border-radius: 5px;
             cursor: pointer;
             transition: 0.2s;
+            float: right;
         }
         .close:hover {
             background-color: red;
+        }
+        a {
+            color: black;
+            padding: 3px;
+            text-decoration: none;
+            transition: 0.1s;
+            border-radius: 3px;
+            border-width: 0px;
+        }
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.724);
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -57,32 +115,73 @@
         <button onclick="LINK.style.display='block'">Links</button>
         <button onclick="FILE.style.display='block'">Files</button>
     </div>
-    <div class="content" id="ISO">
-        <button class="close" onclick="ISO.style.display='none'">Close Tab(ISOS)</button>
+    <div class="fixedtask">
+        <img onclick="ISO.style.display='block'" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwinaero.com%2Fblog%2Fwp-content%2Fuploads%2F2018%2F10%2FCD-DVD-ISO-icon-big-256-04.png&f=1&nofb=1&ipt=727f799f7253ba4941febf5b97275e6ef862d2a5c250dda35fcd49798e51064b&ipo=images">
+        <img onclick="LINK.style.display='block'" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcodeopinion.com%2Fwp-content%2Fuploads%2F2017%2F04%2FLink-symbol.png&f=1&nofb=1&ipt=06ee90a29d97ca9ef53c40309deef76566c07c7f344ecb8da6fd7ccfef43daea&ipo=images">
+        <img onclick="FILE.style.display='block'" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffreepngimg.com%2Fthumb%2Ffolder%2F20-folder-png-image.png&f=1&nofb=1&ipt=efc7cf627c4566470c7d0ec62a8c9e53d32ef2004125eb9cb3f7c5091ca94636&ipo=images">
+    </div>
+    <div class="close-everything">
+        <button onclick="displayElements()">Öffne alles</button>
         <br>
-        <a href="">https://</a>
+        <button onclick="closeElements()">Schließe alles</button>
+    </div>
+    <div class="content" id="ISO">
+        <button class="close" onclick="ISO.style.display='none'">X (ISOS)</button>
+        <br>
+        <a href="" target="_blank">https://</a>
         
     </div>
     <div class="content" id="LINK">
-        <button class="close" onclick="LINK.style.display='none'">Close Tab(LINKS)</button>
+        <button class="close" onclick="LINK.style.display='none'">X (LINKS)</button>
         <br>
-        <a href="https://ubuntu.com/download/desktop">Ubuntu Desktop(https://ubuntu.com/download/desktop)</a>
+        <a href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu Desktop(https://ubuntu.com/download/desktop)</a>
         
     </div>
     <div class="content" id="FILE">
-        <button class="close" onclick="FILE.style.display='none'">Close Tab(FILES)</button>
+        <button class="close" onclick="FILE.style.display='none'">X (FILES)</button>
         <br>
-        <a href="">https://</a>
+        <a href="" target="_blank">https://</a>
         <br>
-        <a href="">https://</a>
+        <a href="" target="_blank">https://</a>
         <br>
-        <a href="">https://</a>
+        <a href="" target="_blank">https://</a>
         <br>
-        <a href="">https://</a>
+        <a href="" target="_blank">https://</a>
         <br>
-        <a href="">https://</a>
+        <a href="" target="_blank">https://</a>
 
         
     </div>
+    <script>
+       
+        function displayElements() {
+    var ISO = document.getElementById('ISO');
+    var LINK = document.getElementById('LINK');
+    var FILE = document.getElementById('FILE');
+
+    if (ISO && LINK && FILE) {
+        ISO.style.display = 'block';
+        LINK.style.display = 'block';
+        FILE.style.display = 'block';
+    } else {
+        console.error('Elemente nicht gefunden');
+    }
+}
+
+function closeElements() {
+    var ISO = document.getElementById('ISO');
+    var LINK = document.getElementById('LINK');
+    var FILE = document.getElementById('FILE');
+
+    if (ISO && LINK && FILE) {
+        ISO.style.display = 'none';
+        LINK.style.display = 'none';
+        FILE.style.display = 'none';
+    } else {
+        console.error('Elemente nicht gefunden');
+    }
+}
+
+    </script>
 </body>
 </html>
